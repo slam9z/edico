@@ -1,21 +1,21 @@
-/**	
+/**
 	* Template Name: Eventoz
-	* Version: 1.0	
+	* Version: 1.0
 	* Template Scripts
 	* Author: MarkUps
 	* Author URI: http://www.markups.io/
 
 	Custom JS
-	
+
 	1. FIXED MENU
 	2. EVENT TIME COUNTER
 	3. MENU SMOOTH SCROLLING
 	4. VIDEO POPUP
 	5. SPEAKERS SLIDEER ( SLICK SLIDER )
-	6. BOOTSTRAP ACCORDION 
-	7. MOBILE MENU CLOSE  
-	
-	
+	6. BOOTSTRAP ACCORDION
+	7. MOBILE MENU CLOSE
+
+
 **/
 
 
@@ -42,7 +42,7 @@
     /*  2. EVENT TIME COUNTER
     /* ----------------------------------------------------------- */
 
-    $('#mu-event-counter').countdown('2018/03/10').on('update.countdown', function(event) {
+    $('#mu-event-counter').countdown('2017/12/31 11:00:00').on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime('' +
             '<span class="mu-event-counter-block"><span>%D</span> Days</span> ' +
             '<span class="mu-event-counter-block"><span>%H</span> Hours</span> ' +
@@ -180,7 +180,7 @@
 
 
     /* ----------------------------------------------------------- */
-    /*  6. BOOTSTRAP ACCORDION 
+    /*  6. BOOTSTRAP ACCORDION
     /* ----------------------------------------------------------- */
 
     /* Start for accordion #1*/
@@ -196,7 +196,7 @@
 
 
     /* ----------------------------------------------------------- */
-    /*  7. MOBILE MENU CLOSE 
+    /*  7. MOBILE MENU CLOSE
     /* ----------------------------------------------------------- */
 
     jQuery('.mu-menu').on('click', 'li a', function() {

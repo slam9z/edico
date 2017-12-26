@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -15,12 +15,18 @@ import { AppComponent } from './app.component';
 import { environment } from './../environments/environment';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal';
+
+import { HomeComponent } from './home/home.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { RegisterComponent } from './register/register.component';
-
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { ClipboardModule } from 'ngx-clipboard';
 
 import { AuthGuardService, AuthService } from './shared/services/index';
 import { AppRoutesModule } from './app-routes.module';
+
 
 
 @NgModule({
@@ -28,17 +34,22 @@ import { AppRoutesModule } from './app-routes.module';
     AppComponent,
     AppNavbarComponent,
     ScheduleComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    FormsModule,
 
     AngularFireAuthModule,
     ParticlesModule,
-
+    ToastModule.forRoot(),
+    ClipboardModule,
     NgbModule.forRoot(),
 
     AppRoutesModule,

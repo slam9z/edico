@@ -3,13 +3,32 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './shared/services/auth-guard.service';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' }
+const appRoutes: Routes = [
+{
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: LoginComponent
+  },
+  {
+    path: 'dashboard',
+    canActivate: [],
+    component: DashboardComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [ RouterModule ],
   declarations: []
 })

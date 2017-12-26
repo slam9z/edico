@@ -4,6 +4,7 @@ import { validateConfig } from '@angular/router/src/config';
 import { User } from '../shared/models/index';
 import { AuthService } from '../shared/services/auth.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,11 +13,15 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
-  private message: any;
-  private msgType: any;
+  message: any;
+  msgType: any;
   private user: User;
+  isCopied: boolean;
+  showEDT: boolean;
+  text: string;
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.createForm();
+    this.text = '0x01760d015473a4fd33466f00f9a9440537656fd';
    }
 
   ngOnInit() {
@@ -48,13 +53,14 @@ export class RegisterComponent implements OnInit {
         .then((res) => {
           console.log('Success:', res);
           this.msgType = 'success';
-          this.message = 'We would like to thank you for your attention to our project.  Please 0x01760d015473a4fd33466f00f9a9440537656fd';
+          this.showEDT = true;
+          this.message = 'We would like to thank you for your attention to our project.';
 
-          //this.router.navigate(['dashboard']);
         })
         .catch((err) => {
-          this.msgType = 'error';
+          this.msgType = 'danger';
           this.message = err;
+          this.showEDT = false;
           console.log('error: ' + err);
         });
 
