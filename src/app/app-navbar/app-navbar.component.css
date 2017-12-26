@@ -1,0 +1,139 @@
+@import "~assets/css/theme-color/jelly-bean-theme.css";
+@import "~assets/css/animates.css";
+.dot {
+    border: 10px solid #ffffff;
+    background: transparent;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    border-radius: 70px;
+    height: 70px;
+    width: 70px;
+    -webkit-animation: pulse 3s ease-out;
+    -moz-animation: pulse 3s ease-out;
+    animation: pulse 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+/* ARROW */
+
+.bounce {
+    animation-name: bounce;
+    -webkit-animation-name: bounce;
+    animation-duration: 1.6s;
+    -webkit-animation-duration: 1.6s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    transform-origin: 75% 100%;
+    -ms-transform-origin: 75% 100%;
+    -webkit-transform-origin: 75% 100%;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.mu-nav-arrow-area {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+.mu-nav-arrow-btn {
+    color: #fff;
+    font-size: 22px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    display: inline-block;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    margin-top: 100px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-animation: pulse 1s ease-out infinite;
+    /* Safari 4.0 - 8.0 */
+    animation: pulse 1s ease-out infinite;
+}
+
+.mu-nav-arrow-btn:hover,
+.mu-nav-arrow-btn:focus {
+    color: #fff;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+/*
+.arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    background: white;
+    border-radius: 50%;
+    transition: all .2s ease;
+    margin-left: -1.5rem;
+    opacity: 0.7;
+}
+
+.arrow-down:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.06);
+    opacity: 1;
+}
+
+.arrow-down:after {
+    content: '';
+    display: inline-block;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAAGVn0euAAAAyklEQVR42u3bSxKCMAwA0N7/Ej1q3bhALH4gSFPfm3GHkKSjbSiUwn5VCQjS7h/g6W+2dX4uP7kQAIQu9urZi7+2mNHamZmYMgEAYKL2ZO8xl1m2PXWjY0nRtdRVwGnbLbdWAQAAAABgbp/sBQy9X/BuJ+bV9tPwSaQIfiuJVMH3kkgXfC+JtO/FpQ4eAAAAAAAAAAAAAIBHtcQ8JB51nr8qfMR7ElHnMQhfFvDIdzlQTIW/aCAUfoCBUPikEzWWmAAAAAAAAADM6gYV+YNrsyoGZAAAAABJRU5ErkJggg==') center no-repeat;
+    height: 3rem;
+    width: 3rem;
+    background-size: 100%;
+    opacity: 0.5;
+}
+ */
+
+
+/* End ARROW */

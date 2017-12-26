@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mu-register-area">
+
+                <div class="mu-title-area">
+                    <h2 class="mu-title">Register Form</h2>
+                    <p>
+                        <ngb-alert *ngIf="message" [type]="msgType" role="alert" [dismissible]="false">
+                            {{ message }}
+                        </ngb-alert>
+                    </p>
+                </div>
+
+                <div class="mu-register-content">
+                    <form [formGroup]="registerForm" class="mu-register-form" (ngSubmit)="onFormSubmit()">
+                        <!-- <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="User Name" formControlName="username">
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="First Name" formControlName="firstname">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+
+                                    <input class="form-control" placeholder="Last Name" formControlName="lastname">
+                                </div>
+
+                            </div>
+
+                        </div> -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" type="email" placeholder="Email" formControlName="email">
+
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched"> Email is invalid </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+
+                                        <input class="form-control" type="password" placeholder="password" formControlName="password">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched"> password is invalid </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <p>Form value: {{ registerForm.value | json }}</p>
+                        <p>Form status: {{ registerForm.status | json }}</p>
+
+                        <p>FirstName value: {{ registerForm.get('firstname').value }}</p> -->
+
+                        <button type="submit" [disabled]="!registerForm.valid" class="btn btn-success">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
