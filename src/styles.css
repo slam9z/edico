@@ -371,14 +371,14 @@ button:focus {
 }
 
 .progress-bar {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  color: #fff;
-  background-color: #007bff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #007bff;
 }
 
 
@@ -753,6 +753,8 @@ button:focus {
 
 
 /* team */
+
+
 /*--------------------*/
 
 #mu-team {
@@ -1177,6 +1179,98 @@ button:focus {
 
 
 /*--------------------*/
+
+#mu-ico {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: inline;
+    float: left;
+    position: relative;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
+#mu-ico::before {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.9;
+}
+
+.mu-ico-area {
+    display: inline;
+    float: left;
+    padding: 150px 0;
+    width: 100%;
+}
+
+.mu-ico-area .mu-title,
+.mu-ico-area p {
+    color: #fff;
+}
+
+.mu-ico-content {
+    display: inline;
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 0 200px;
+    margin-top: 50px;
+}
+
+.mu-ico-form .form-group {
+    margin-bottom: 25px;
+}
+
+.mu-ico-form .form-control {
+    height: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.mu-ico-form select.form-control option {
+    color: #333;
+}
+
+.mu-ico-form .form-control::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 15px;
+}
+
+.mu-ico-form .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    font-size: 15px;
+}
+
+.mu-ico-form .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    font-size: 15px;
+}
+
+.mu-ico-form .form-control:-ms-input-placeholder {
+    color: #fff;
+    font-size: 15px;
+}
+
+.mu-ico-submit-btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 75px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
 
 
 /* SPONSORS */
@@ -1814,4 +1908,3 @@ button:focus {
         font-size: 22px;
     }
 }
-
