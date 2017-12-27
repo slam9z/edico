@@ -8,7 +8,7 @@
         settings: {
             donut: false,
             donut_inner_ratio: 0.4, // between 0 and 1
-            percent_offset: -15, // relative to radius
+            percent_offset: 1, // relative to radius
             stroke_color: '#fff',
             stroke_width: 0,
             show_percent: true, // show or hide the percentage on the chart.
