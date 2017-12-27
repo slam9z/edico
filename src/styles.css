@@ -440,6 +440,10 @@ button:focus {
     width: 100%;
 }
 
+.mu-pie-area {
+  padding: 20px 0;
+}
+
 .mu-about-area {
     display: inline;
     float: left;
