@@ -1,2 +1,48 @@
 @import "~assets/css/theme-color/jelly-bean-theme.css";
 @import "~assets/css/custom.scss";
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    /* width: 80%; */
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+#customers td,
+#customers th {
+    border: 0px solid #ddd;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    background-color: "#26v2f39";
+}
+
+#customers tr:nth-child(even) {
+    background-color: #69a2b12d;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgba(150, 252, 252, 0.7);
+    /* color: white; */
+}
+
+#customers th .font-blue {
+    color: #2da1f8;
+}
+
+.wrapperCenter {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    float: none;
+}
