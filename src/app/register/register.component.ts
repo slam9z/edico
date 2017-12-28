@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   display = 'none';
   constructor(private fb: FormBuilder, private authService: AuthService, private modalService: NgbModal) {
     this.createForm();
-    this.contractAddress = '0x01760d015473a4fd33466f00f9a9440537656fd';
+    this.contractAddress = '0x01760d015473A4Fd33466F00f9A94405376565FD';
    }
 
   ngOnInit() {
