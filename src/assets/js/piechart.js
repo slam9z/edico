@@ -250,12 +250,12 @@
                         .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]);
 
                 path.animate({
-                    transform: 's1.05 1.05 ' + cx + ' ' + cy
+                    transform: 's1.15 1.15 ' + cx + ' ' + cy
                 }, settings.animation_speed, mina[settings.animation_type]);
 
                 text.touchend(function() {
                     path.animate({
-                        transform: 's1.05 1.05 ' + cx + ' ' + cy
+                        transform: 's1.15 1.15 ' + cx + ' ' + cy
                     }, settings.animation_speed, mina[settings.animation_type]);
                 });
 

@@ -21,6 +21,10 @@
     opacity: 0;
 }
 
+a.navbar-brand {
+    height: 50px;
+    padding: 0;
+}
 
 /* ARROW */
 

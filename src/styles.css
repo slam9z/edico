@@ -50,7 +50,6 @@ Version: 1.0
 
 
 /*--------------------*/
-
 body,
 html {
     overflow-x: hidden;
@@ -250,6 +249,7 @@ button:focus {
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
+    height: 50%;
 }
 
 .mu-hero-overlay {
@@ -257,6 +257,10 @@ button:focus {
     float: left;
     opacity: 0.94;
     width: 100%;
+}
+
+.mu-logo-sm img {
+  width: 150px;
 }
 
 .mu-logo-area {
@@ -444,11 +448,24 @@ button:focus {
   padding: 20px 0;
 }
 
+.mu-advantage-area {
+    display: inline;
+    float: left;
+    padding: 20px 0;
+    width: 100%;
+}
+
 .mu-about-area {
     display: inline;
     float: left;
     padding: 70px 0;
     width: 100%;
+}
+
+.mu-sm-title-area {
+    text-align: center;
+    padding:25px;
+
 }
 
 .mu-title-area {
@@ -1209,7 +1226,7 @@ button:focus {
 .mu-ico-area {
     display: inline;
     float: left;
-    padding: 150px 0;
+    padding: 50px 0;
     width: 100%;
 }
 
@@ -1858,7 +1875,7 @@ button:focus {
 
 @media (max-width: 360px) {
     .mu-logo img {
-        width: 120px;
+        width: 50px;
     }
     .mu-hero-featured-area {
         padding: 30px 0 30px;
