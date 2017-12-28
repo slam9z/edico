@@ -445,7 +445,7 @@ button:focus {
 }
 
 .mu-pie-area {
-  padding: 20px 0;
+    padding: 20px 0;
 }
 
 .mu-advantage-area {
@@ -1516,8 +1516,8 @@ button:focus {
 }
 
 .error {
-    padding: 1em;
-    margin-bottom: 0.75rem;
+    padding: 0.4em;
+    margin-bottom: 0.55rem;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     color: #b94a48;
     background-color: #f2dede;

@@ -26,6 +26,7 @@ import { ClipboardModule } from 'ngx-clipboard';
 
 import { AuthGuardService, AuthService } from './shared/services/index';
 import { AppRoutesModule } from './app-routes.module';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 
 
@@ -37,7 +38,8 @@ import { AppRoutesModule } from './app-routes.module';
     RegisterComponent,
     LoginComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    ModalDialogComponent
   ],
   imports: [
     BrowserModule,

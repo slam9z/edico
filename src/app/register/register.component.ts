@@ -4,6 +4,7 @@ import { validateConfig } from '@angular/router/src/config';
 import { User } from '../shared/models/index';
 import { AuthService } from '../shared/services/auth.service';
 import { Router } from '@angular/router';
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-register',
@@ -16,12 +17,14 @@ export class RegisterComponent implements OnInit {
   message: any;
   msgType: any;
   private user: User;
-  isCopied: boolean;
+  contractAddress: string;
   showEDT: boolean;
-  text: string;
-  constructor(private fb: FormBuilder, private authService: AuthService) {
+
+  isCopied = false;
+  display = 'none';
+  constructor(private fb: FormBuilder, private authService: AuthService, private modalService: NgbModal) {
     this.createForm();
-    this.text = '0x01760d015473a4fd33466f00f9a9440537656fd';
+    this.contractAddress = '0x01760d015473a4fd33466f00f9a9440537656fd';
    }
 
   ngOnInit() {
@@ -34,7 +37,9 @@ export class RegisterComponent implements OnInit {
         Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
         Validators.minLength(6),
         Validators.maxLength(25)
-      ]]
+      ]],
+      agreement: ['', Validators.required],
+
     });
 
   }
@@ -44,6 +49,9 @@ export class RegisterComponent implements OnInit {
 
   get password() { return this.registerForm.get('password'); }
 
+  get agreement() { return this.registerForm.get('agreement'); }
+
+
   public onFormSubmit() {
     if (this.registerForm.valid) {
       this.user = this.registerForm.value;
@@ -51,10 +59,10 @@ export class RegisterComponent implements OnInit {
       /* Any API call logic via services goes here */
       this.authService.signup(this.user)
         .then((res) => {
-          console.log('Success:', res);
+          // console.log('Success:', res);
           this.msgType = 'success';
           this.showEDT = true;
-          this.message = 'We would like to thank you for your attention to our project.';
+          this.message = 'Ether Delta would like to thank you for your attention to our project. Our Contract Address as following:';
 
         })
         .catch((err) => {
@@ -68,5 +76,4 @@ export class RegisterComponent implements OnInit {
 
 
   }
-
 }

@@ -1,64 +1,108 @@
-<header id="mu-hero" role="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="mu-register-area">
+<main role="main">
+    <section id="mu-login">
+        <div class="container login-padding-top login-margin ">
+            <div class="login_box wrapperCenter">
 
-                    <div class="mu-title-area">
-                        <h2 class="mu-title">Register Form</h2>
-                        <p>
-                            <ngb-alert *ngIf="message" [type]="msgType" role="alert" [dismissible]="false">
-                                {{ message }}
-                                <div *ngIf="showEDT" class="input-group text-center col-md-7 col-md-offset-7">
-                                    <span class="input-group-btn">
-                            <input type="text" class="form-control" [disabled]='true' [(ngModel)]="text">
-
-        <button class="btn btn-default" [class.btn-success]= "isCopied" type="button" ngxClipboard [cbContent]="text" (cbOnSuccess)="isCopied1 = true">copy</button>
-      </span>
-                                </div>
-                            </ngb-alert>
-
-                        </p>
-
+                <div class="col-md-12 col-xs-12" align="center">
+                    <div class="line">
+                        <h2><span>Registration</span></h2>
                     </div>
+                    <div class="wrapper"><img src="assets/images/logo.jpg" class="img-circle" /></div>
 
-                    <div class="mu-register-content">
-                        <form [formGroup]="registerForm" class="mu-register-form" (ngSubmit)="onFormSubmit()">
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="form-group">
-                                        <input class="form-control" type="email" placeholder="Email" formControlName="email">
-                                        <div class="" *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched"> Email is invalid </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-
-                                        <input class="form-control" type="password" placeholder="password" formControlName="password">
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-                                    <div *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched"> password is invalid </div>
-                                </div>
-                            </div>
-
-
-                            <!-- <p>Form value: {{ registerForm.value | json }}</p>
-                        <p>Form status: {{ registerForm.status | json }}</p>
-
-                        <p>FirstName value: {{ registerForm.get('firstname').value }}</p> -->
-
-                            <button type="submit" [disabled]="!registerForm.valid" class="btn btn-success">Submit</button>
-                        </form>
-
-                    </div>
                 </div>
+                <form novalidate [formGroup]="registerForm" (ngSubmit)="onFormSubmit() ">
+                    <div class="col-md-12 col-xs-12 login_control">
+
+                        <div class="control">
+                            <input type="email" class="form-control " formControlName="email" placeholder="Email " required>
+                        </div>
+                        <div class="control" *ngIf="email.errors && (email.dirty || email.touched) ">
+                            <div class="form-group error">
+                                <span *ngIf="email.errors.required">Email is required</span>
+                                <span *ngIf="email.errors.pattern">The email address must contain at least the @ character</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <input type="password" class="form-control" placeholder="Password" formControlName="password" required>
+                        </div>
+                        <div class="control" *ngIf="password.errors && (password.dirty || password.touched) ">
+                            <div class="form-group error ">
+                                <span *ngIf="password.errors.required">Password is required.</span>
+                                <span *ngIf="password.errors.pattern">Password must be include at least one letter and one number.</span>
+                                <span *ngIf="password.errors.minlength">Password must be 6 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </span>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="control">
+                            <div class="form-group">
+                                <label class="label">Terms and conditions</label>
+                                <div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
+                                    <p>Please confirm that you are NOT a citizen of or resident of the People's Republic of China or an entity formed under the laws of the People's Republic of China (each a &quot;Chinese Person&quot;) nor are you purchasing
+                                        Etherdelta Tokens or signing on behalf of a Chinese Person. </p>
+                                    <p>Confirm that you are not a United States citizen, resident or green card holder, or have a primary residence or domicile in the United States, including Puerto Rico, the U.S. Virgin Islands or any other territories
+                                        of the United States and are not purchasing Etherdelta tokens or signing on behalf of a United States citizen, resident or entity.</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="form-group">
+                                <div class="checkbox login-padding-left">
+                                    <label><input type="checkbox" name="agreement" formControlName="agreement" value=""> I Agree with the terms and conditions</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="control " *ngIf="agreement.errors && (agreement.dirty || agreement.touched) ">
+                            <div class="form-group error">
+                                <p *ngIf="agreement.errors.required">Agreement is required.</p>
+
+                            </div>
+                        </div>
+                        <div class="text-center ">
+                            <button type="submit " class="btn btn-success" [disabled]="!registerForm.valid"><span>SUBMIT</span></button>
+                        </div>
+
+                        <div>
+                            <label></label>
+                        </div>
+                        <div class="control">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ngb-alert *ngIf="message" [type]="msgType" role="alert" [dismissible]="false">
+                                        {{ message }}
+                                        <div>
+                                            <label></label>
+                                        </div>
+                                        <div *ngIf="showEDT" class="input-group">
+                                            <div class="line"></div>
+                                            <input type="text" #inputTarget class="form-control form-control-offset" disabled [value]="contractAddress">
+
+                                            <span class="input-group-btn">
+                                      <button class="btn btn-default" [class.btn-success]= "isCopied" type="button" ngxClipboard [cbContent]="contractAddress" (cbOnSuccess)="isCopied = true">copy</button>
+                                    </span>
+                                        </div>
+
+                                    </ngb-alert>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <label></label>
+                        <label></label>
+                    </div>
+                </form>
+
+                <!--<pre>{{registerForm.value | json}}</pre>-->
+
             </div>
         </div>
-    </div>
-</header>
+
+    </section>
+
+
+
+</main>
