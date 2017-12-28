@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './app-navbar.component.html',
@@ -11,7 +11,7 @@ export class AppNavbarComponent implements OnInit {
   width = 100;
   height = 100;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
 
@@ -46,5 +46,9 @@ export class AppNavbarComponent implements OnInit {
       }
     };
   }
+
+gotoRegister() {
+  this.router.navigate(['register']);
+}
 
 }
