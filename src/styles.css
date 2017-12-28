@@ -1199,7 +1199,6 @@ button:focus {
     transition: all 0.5s;
 }
 
-
 /*--------------------*/
 
 #mu-ico {
@@ -1526,6 +1525,22 @@ button:focus {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+}
+
+#mu-parterner {
+    display: inline;
+    float: left;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.mu-parterner-content {
+    display: inline;
+    float: left;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
 }
 
 
