@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'register',
-    component: LoginComponent
+    component: RegisterComponent
   },
   {
     path: 'dashboard',

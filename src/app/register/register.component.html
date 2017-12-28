@@ -1,64 +1,111 @@
-<header id="mu-hero" role="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="mu-register-area">
+<main role="main">
+    <section id="mu-login">
+        <div class="container login-padding-top login-margin ">
+            <div class="login_box wrapperCenter">
 
-                    <div class="mu-title-area">
-                        <h2 class="mu-title">Register Form</h2>
-                        <p>
-                            <ngb-alert *ngIf="message" [type]="msgType" role="alert" [dismissible]="false">
-                                {{ message }}
-                                <div *ngIf="showEDT" class="input-group text-center col-md-7 col-md-offset-7">
-                                    <span class="input-group-btn">
-                            <input type="text" class="form-control" [disabled]='true' [(ngModel)]="text">
-
-        <button class="btn btn-default" [class.btn-success]= "isCopied" type="button" ngxClipboard [cbContent]="text" (cbOnSuccess)="isCopied1 = true">copy</button>
-      </span>
-                                </div>
-                            </ngb-alert>
-
-                        </p>
-
+                <div class="col-md-12 col-xs-12" align="center">
+                    <div class="line">
+                        <h2><span>Registration</span></h2>
                     </div>
+                    <div class="wrapper"><img src="assets/images/logo.jpg" class="img-circle" /></div>
 
-                    <div class="mu-register-content">
-                        <form [formGroup]="registerForm" class="mu-register-form" (ngSubmit)="onFormSubmit()">
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="form-group">
-                                        <input class="form-control" type="email" placeholder="Email" formControlName="email">
-                                        <div class="" *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched"> Email is invalid </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-
-                                        <input class="form-control" type="password" placeholder="password" formControlName="password">
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-                                    <div *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched"> password is invalid </div>
-                                </div>
-                            </div>
-
-
-                            <!-- <p>Form value: {{ registerForm.value | json }}</p>
-                        <p>Form status: {{ registerForm.status | json }}</p>
-
-                        <p>FirstName value: {{ registerForm.get('firstname').value }}</p> -->
-
-                            <button type="submit" [disabled]="!registerForm.valid" class="btn btn-success">Submit</button>
-                        </form>
-
-                    </div>
                 </div>
+                <form novalidate [formGroup]="registerForm" (ngSubmit)="onFormSubmit() ">
+                    <div class="col-md-12 col-xs-12 login_control">
+
+                        <div class="control">
+                            <input type="email" class="form-control " formControlName="email" placeholder="Email " required>
+                        </div>
+                        <div class="control" *ngIf="email.errors && (email.dirty || email.touched) ">
+                            <div class="form-group error">
+                                <span *ngIf="email.errors.required">Email is required</span>
+                                <span *ngIf="email.errors.pattern">The email address must contain at least the @ character</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <input type="password" class="form-control" placeholder="Password" formControlName="password" required>
+                        </div>
+                        <div class="control" *ngIf="password.errors && (password.dirty || password.touched) ">
+                            <div class="form-group error ">
+                                <span *ngIf="password.errors.required">Password is required.</span>
+                                <span *ngIf="password.errors.pattern">Password must be include at least one letter and one number.</span>
+                                <span *ngIf="password.errors.minlength">Password must be 6 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </span>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="control">
+                            <div class="form-group">
+                                <label class="label">Terms and conditions</label>
+                                <div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
+                                    <p>Lorem ipsum dolor sit amet, veniam numquam has te. No suas nonumes recusabo mea, est ut graeci definitiones. His ne melius vituperata scriptorem, cum paulo copiosae conclusionemque at. Facer inermis ius in, ad brute
+                                        nominati referrentur vis. Dicat erant sit ex. Phaedrum imperdiet scribentur vix no, ad latine similique forensibus vel.</p>
+                                    <p>Dolore populo vivendum vis eu, mei quaestio liberavisse ex. Electram necessitatibus ut vel, quo at probatus oportere, molestie conclusionemque pri cu. Brute augue tincidunt vim id, ne munere fierent rationibus mei.
+                                        Ut pro volutpat praesent qualisque, an iisque scripta intellegebat eam.</p>
+                                    <p>Mea ea nonumy labores lobortis, duo quaestio antiopam inimicus et. Ea natum solet iisque quo, prodesset mnesarchum ne vim. Sonet detraxit temporibus no has. Omnium blandit in vim, mea at omnium oblique.</p>
+                                    <p>Eum ea quidam oportere imperdiet, facer oportere vituperatoribus eu vix, mea ei iisque legendos hendrerit. Blandit comprehensam eu his, ad eros veniam ridens eum. Id odio lobortis elaboraret pro. Vix te fabulas partiendo.</p>
+                                    <p>Natum oportere et qui, vis graeco tincidunt instructior an, autem elitr noster per et. Mea eu mundi qualisque. Quo nemore nusquam vituperata et, mea ut abhorreant deseruisse, cu nostrud postulant dissentias qui. Postea
+                                        tincidunt vel eu.</p>
+                                    <p>Ad eos alia inermis nominavi, eum nibh docendi definitionem no. Ius eu stet mucius nonumes, no mea facilis philosophia necessitatibus. Te eam vidit iisque legendos, vero meliore deserunt ius ea. An qui inimicus inciderint.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="form-group">
+                                <div class="checkbox login-padding-left">
+                                    <input type="checkbox" name="agreement" formControlName="agreement" value="1"> I Agree with the terms and conditions
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="control " *ngIf="agreement.errors && (agreement.dirty || agreement.touched) ">
+                            <div class="form-group error">
+                                <p *ngIf="agreement.errors.required">Agreement is required.</p>
+
+                            </div>
+                        </div>
+                        <div class="text-center ">
+                            <button type="submit " class="btn btn-success" [disabled]="!registerForm.valid"><span>SUBMIT</span></button>
+                        </div>
+
+                        <div>
+                            <label></label>
+                        </div>
+                        <div class="control">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ngb-alert *ngIf="message" [type]="msgType" role="alert" [dismissible]="false">
+                                        {{ message }}
+                                        <div>
+                                            <label></label>
+                                        </div>
+                                        <div *ngIf="showEDT" class="input-group">
+                                            <div class="line"></div>
+                                            <input type="text" #inputTarget class="form-control form-control-offset" disabled [value]="contractAddress">
+
+                                            <span class="input-group-btn">
+                                      <button class="btn btn-default" [class.btn-success]= "isCopied" type="button" ngxClipboard [cbContent]="contractAddress" (cbOnSuccess)="isCopied = true">copy</button>
+                                    </span>
+                                        </div>
+
+                                    </ngb-alert>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <label></label>
+                        <label></label>
+                    </div>
+                </form>
+
+                <!--<pre>{{registerForm.value | json}}</pre>-->
+
             </div>
         </div>
-    </div>
-</header>
+
+    </section>
+
+
+
+</main>

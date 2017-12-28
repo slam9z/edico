@@ -1,13 +1,15 @@
-<div class="container">
-    <div class="row login_box">
-        <div class="col-md-12 col-xs-12" align="center">
-            <div class="line">
-                <h3>12 : 30 AM</h3>
-            </div>
-            <div class="wrapper"><img src="http://lorempixel.com/80/80/people" class="img-circle" /></div>
-            <h1>Hi Guest</h1>
-            <span>INDIAN</span>
-        </div>
+<main role="main">
+    <section id="mu-login">
+        <div class="container login-padding-top">
+            <div class="row login_box">
+                <div class="col-md-12 col-xs-12" align="center">
+                    <div class="line">
+                        <h3>Registration</h3>
+                    </div>
+                    <div class="wrapper"><img src="http://lorempixel.com/80/80/people" class="img-circle" /></div>
+
+                </div>
+                <!--
         <div class="col-md-6 col-xs-6 follow line text-center">
             <h3>
                 125651 <br/> <span>FOLLOWERS</span>
@@ -17,23 +19,72 @@
             <h3>
                 125651 <br/> <span>FOLLOWERS</span>
             </h3>
+        </div>-->
+
+                <div class="col-md-12 col-xs-12 login_control">
+
+                    <div class="control">
+                        <div class="label">Email Address</div>
+                        <input type="text" class="form-control" value="admin@gmail.com" />
+                    </div>
+
+                    <div class="control">
+                        <div class="label">Password</div>
+                        <input type="password" class="form-control" value="123456" />
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-orange">LOGIN</button>
+                    </div>
+
+                </div>
+
+                <form novalidate [formGroup]="registerForm " (ngSubmit)="onFormSubmit() " class="mu-contact-form ">
+
+                    <div class="form-group " [ngClass]="{ 'has-danger': email.invalid && (email.dirty || email.touched), 'has-success': email.valid && (email.dirty || email.touched)} ">
+
+                        <input type="email" class="form-control font_white" formControlName="email" placeholder="Enter Email " required>
+                    </div>
+                    <div class="form-group error " *ngIf="email.errors && (email.dirty || email.touched) ">
+                        <p *ngIf="email.errors.required ">Email is required</p>
+                        <p *ngIf="email.errors.pattern ">The email address must contain at least the @ character</p>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <input type="password " class="form-control font_white " placeholder="Password " formControlName="password" required>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="form-group error " *ngIf="password.errors && (password.dirty || password.touched) ">
+                            <p *ngIf="password.errors.required ">Password is required.</p>
+                            <p *ngIf="password.errors.pattern">Password must be include at one letter and one number.</p>
+                            <p *ngIf="password.errors.minlength ">Password must be 6 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Terms of use</label>
+                        <div class="col-xs-8">
+                            <div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
+                                <p>ajsdahskdhaksdakhdkahsjdaxbakjhsdhafjhahdj</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6 col-xs-offset-3">
+                            <div class="checkbox">
+                                <input type="checkbox" name="agreement" formControlName="agreement" value="1"> Agree with the terms and conditions
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success"><span>SUBMIT</span></button>
+                    <!-- <pre>{{contactForm.value | json}}</pre> -->
+
+                </form>
+            </div>
         </div>
 
-        <div class="col-md-12 col-xs-12 login_control">
-
-            <div class="control">
-                <div class="label">Email Address</div>
-                <input type="text" class="form-control" value="admin@gmail.com" />
-            </div>
-
-            <div class="control">
-                <div class="label">Password</div>
-                <input type="password" class="form-control" value="123456" />
-            </div>
-            <div class="text-center">
-                <button class="btn btn-orange">LOGIN</button>
-            </div>
-
-        </div>
-    </div>
-</div>
+    </section>
+</main>
