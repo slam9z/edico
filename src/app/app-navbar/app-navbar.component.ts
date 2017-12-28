@@ -51,4 +51,11 @@ gotoRegister() {
   this.router.navigate(['register']);
 }
 
+gotoExchange() {
+   window.open(
+     'https://etherdelta.com/',
+     '_blank' // <- This is what makes it open in a new window.
+   );
+}
+
 }
