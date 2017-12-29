@@ -123,9 +123,24 @@ h6 {
     font-size: 18px;
 }
 
+.logo-img {
+    border: none;
+    max-width: 60%;
+}
+
+.profile-img {
+    border: none;
+    max-width: 70%;
+}
+
+.slogon-logo {
+    border: none;
+    max-width: 90%;
+}
+
 img {
     border: none;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 code {
@@ -238,12 +253,16 @@ button:focus {
 
 
 /* HEADER */
+.mu-slogon {
+  display: inline-block;
+  padding: 0 0 15px;
+}
 
 
 /*--------------------*/
 
 #mu-hero {
-    background-image: url("assets/images/trianglifybg.png");
+    background-image: url("assets/images/trianglifybg.jpg");
     display: inline;
     float: left;
     width: 100%;
@@ -332,6 +351,18 @@ button:focus {
     font-weight: 300;
 }
 
+.mu-hero-featured-content h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 250;
+}
+
+.mu-hero-featured-content h5 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+}
+
 .mu-event-date-line {
     background-color: #fff;
     color: #333;
@@ -359,13 +390,13 @@ button:focus {
     border: 0px solid #fff;
     border-radius: 50%;
     display: inline-block;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     text-align: center;
-    font-size: 27px;
+    font-size: 23px;
     color: #fff;
     margin: 0 8px;
-    font-weight: 400;
+    font-weight: 370;
 }
 
 .mu-event-counter-block span {
@@ -466,7 +497,7 @@ button:focus {
 
 .mu-sm-title-area {
     text-align: center;
-    padding: 25px;
+    padding: 0 0 15px;
 }
 
 .mu-title-area {
@@ -631,6 +662,7 @@ button:focus {
     display: inline;
     float: left;
     width: 100%;
+    padding: 25px 0 20px;
 }
 
 .mu-schedule-area {
@@ -1199,7 +1231,6 @@ button:focus {
     transition: all 0.5s;
 }
 
-
 /*--------------------*/
 
 #mu-ico {
@@ -1528,6 +1559,22 @@ button:focus {
     border-radius: 4px;
 }
 
+#mu-partners {
+    display: inline;
+    float: left;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.mu-partners-content {
+    display: inline;
+    float: left;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
 
 /*--------------------*/
 
@@ -1614,6 +1661,12 @@ button:focus {
 /*--------------------*/
 
 @media (max-width: 1199px) {
+    .slogon-logo {
+        border: none;
+        max-width: 70%;
+        padding: 0 0 10px;
+    }
+
     .mu-register-content {
         padding: 0 150px;
     }
@@ -1634,6 +1687,12 @@ button:focus {
 }
 
 @media (max-width: 991px) {
+    .slogon-logo {
+        border: none;
+        max-width: 20%;
+        padding: 0 0 10px;
+    }
+
     .mu-primary-btn {
         font-size: 14px;
         padding: 12px 22px;
@@ -1690,7 +1749,7 @@ button:focus {
         width: 100%;
     }
     .mu-title-area {
-        padding: 0 50px;
+        padding: 20px 50px;
     }
     .mu-faq-content {
         padding: 0;
@@ -1728,6 +1787,13 @@ button:focus {
 }
 
 @media (max-width: 767px) {
+
+    .slogon-logo {
+        border: none;
+        max-width: 30%;
+        padding: 0 0 10px;
+    }
+
     .mu-logo img {
         width: 150px;
     }
@@ -1746,6 +1812,12 @@ button:focus {
 }
 
 @media (max-width: 640px) {
+    .slogon-logo {
+        border: none;
+        max-width: 30%;
+        padding: 0 0 10px;
+    }
+
     .mu-event-counter-block {
         height: 100px;
         width: 100px;
@@ -1781,6 +1853,11 @@ button:focus {
     .mu-logo {
         margin-bottom: 10px;
         font-size: 30px;
+    }
+    .slogon-logo {
+        border: none;
+        max-width: 30%;
+        padding: 0 0 10px;
     }
     .mu-hero-featured-area {
         padding: 60px 0 60px;
@@ -1878,6 +1955,13 @@ button:focus {
     .mu-logo img {
         width: 50px;
     }
+
+    .slogon-logo {
+        border: none;
+        max-width: 30%;
+        padding: 0 0 10px;
+    }
+
     .mu-hero-featured-area {
         padding: 30px 0 30px;
     }
@@ -1920,6 +2004,13 @@ button:focus {
     .mu-video-iframe-area {
         padding: 30% 5%;
     }
+
+    .slogon-logo {
+        border: none;
+        max-width: 30%;
+        padding: 0 0 10px;
+    }
+
     .mu-event-timeline ul li .mu-single-event,
     .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event,
     .mu-event-timeline ul li:nth-child(2n) .mu-single-event {
