@@ -54,6 +54,21 @@
 </nav>
 <!-- End menu -->
 
+<div class="side-nav-bar">
+  <ul class="side-nav-bar-ul">
+    <li>
+      <a href="https://twitter.com/etherdelta">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li><a href="https://www.facebook.com/MolecularFuture/"><i class="fa fa-facebook"></i></a></li>
+    <li class="wechat"><a><i class="fa fa-wechat"></i></a></li>
+    <div class="wechatCord">
+      <img src="ico/image/wechatCord.jpg" alt="" style="width:100px;">
+    </div>
+  </ul>
+</div>
+
 <div class="mu-hero-overlay">
   <div class="container">
     <div class="mu-hero-area">
@@ -71,49 +86,61 @@
           <!--</div>-->
           <!-- End center Logo -->
 
-          <div class="mu-hero-featured-content">
+          <div class="">
             <div class="row">
               <div class="col-md-6">
 
                 <!--slogon-->
-                <div class="row">
-                  <div class="col-md-3">
-                    <img class="slogon-logo" src="assets/images/icon/edlogo.png" alt="EtherDelta">
+                <div class="mu-hero-featured-content">
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                      <img class="slogon-logo" src="assets/images/icon/edlogo.png" alt="EtherDelta">
+                    </div>
+                    <!--<div class="col-md-9">-->
+                    <!--<h3 translate>DECENTRALIZED EXCHANGE-->
+                    <!--</h3>-->
+                    <!--</div>-->
                   </div>
-                  <div class="col-md-9">
-                    <h3>
-                      <Strong translate>DECENTRALIZED EXCHANGE</Strong>
-                    </h3>
-                    <h5 translate>JOIN THE TRADING REVOLUTION</h5>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3><strong>DECENTRALIZED EXCHANGE</strong></h3>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3>Token Generation Event Start In</h3>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="mu-event-counter">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal"
+                            data-target="#myModal " (click)='downloadWP()' translate>
+                      Whitepaper
+                    </button>
+                    <!--<button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal"-->
+                    <!--data-target="#myModal " (click)='gotoRegister()' translate>-->
+                    <!--Join Token Sale-->
+                    <!--</button>-->
+                    <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal"
+                            data-target="#myModal" (click)='gotoExchange()' translate>
+                      Visit Exchange
+                    </button>
                   </div>
                 </div>
                 <!--end of slogon-->
 
                 <!--count down-->
                 <!--<p class="mu-event-date-line">March 01, 2018. New York, USA</p>-->
-                <div class="mu-event-counter-area">
-                  <h3>Token Generation Event Start In</h3>
-                  <div id="mu-event-counter">
-                  </div>
-                </div>
+                <!--<div class="mu-hero-featured-content">-->
+                <!--<h3>Token Generation Event Start In</h3>-->
+                <!--<div id="mu-event-counter">-->
+                <!--</div>-->
+                <!--</div>-->
 
                 <!--end of count down-->
-
-                <div class="mu-hero-featured-content">
-                  <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal"
-                          data-target="#myModal " (click)='downloadWP()' translate>
-                    download Whitepaper
-                  </button>
-                  <!--<button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal"-->
-                          <!--data-target="#myModal " (click)='gotoRegister()' translate>-->
-                    <!--Join Token Sale-->
-                  <!--</button>-->
-                  <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal"
-                          data-target="#myModal" (click)='gotoExchange()' translate>
-                    Visit Exchange
-                  </button>
-                </div>
-
                 <!--<h3 id="totalRaised"></h3>-->
 
                 <!--end of progress bar-->
@@ -122,7 +149,7 @@
             </div>
           </div>
         </div>
-        
+
         <!--<div class="mu-nav-arrow-area ">-->
         <!--<a class="mu-nav-arrow-btn" href="#mu-about">-->
         <!--<i aria-hidden="true" class="fa fa-arrow-down"></i>-->
