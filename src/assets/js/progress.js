@@ -2,7 +2,7 @@
 const writeValue = (elementId, value) => document.getElementById(elementId).textContent = value;
 const weiToEther = wei => wei / 10**18;
 const totalEther = 150000/8500;
-const percent = ether => ether / totalEther * 100;
+const percent = ether => (ether / totalEther * 100).toFixed(1);
 
 const targetApi = 'https://ropsten.infura.io/Kgx1nx3BuoZLPDNH2RkK';
 //const targetApi = 'https://mainnet.infura.io/Kgx1nx3BuoZLPDNH2RkK';
@@ -22,5 +22,5 @@ let etherPercent = percent(totalRaised) + '%';
 writeValue('totalRaisedPercent', etherPercent);
 
 $('#progress-solid-line').css('width', etherPercent);
-$('#progress').text((progress * 100).toFixed(1) + '%').css('left', progress * 338 - 30 + 'px');
-$('#eth-amount').text(res.eth);
+//$('#progress').text((progress * 100).toFixed(1) + '%').css('left', progress * 338 - 30 + 'px');
+//$('#eth-amount').text(res.eth);
