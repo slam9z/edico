@@ -1,29 +1,23 @@
 {
     "En": "EN",
+    "DECENTRALIZED EXCHANGE": "DECENTRALIZED EXCHANGE",
+    "JOIN THE TRADING REVOLUTION": "OIN THE TRADING REVOLUTION",
     "Whitepaper": "Whitepaper",
     "Join Token Sale": "Join Token Sale",
+    "Visit Exchange": "Visit Exchange",
+    "Partners": "Partners",
+    "Cn": "中",
+    "Home": "Home",
     "About Us": "About Us",
     "Token Sale": "Token Sale",
     "Schedule": "Schedule",
-    "Cn": "中",
-    "Advisors": "Advisors",
-    "Partners": "Partners",
-    "Register": "Register",
-    "Visit Exchange": "Visit Exchange",
-    "Home": "Home",
     "Team": "Team",
-    "As an open, multilateral trading platform that supports ERC20 tokens and smart contracts": {
-        " It is a decentralized trading platform that does not involve any centralized exchange or traditional asset management methodology": {
-            "0": ""
-        }
-    },
-    "We have positioned this platform as a future standard and an industry infrastructure that features the next generation of digital asset exchange": {
-        "0": ""
-    },
+    "Advisors": "Advisors",
+    "Register": "Register",
     "Diversity": "Diversity",
     "High number of coin selections": "High number of coin selections",
     "Decentralization": "Decentralization",
-    "Distributed transactions, globally none geographic restrictions": "Distributed transactions, globally none geographic restrictions",
+    "distributed transactions, globally none geographic restrictions": "distributed transactions, globally none geographic restrictions",
     "Unlock KYC": "nlock KYC",
     "No registration and no complicated KYC process": "No registration and no complicated KYC process",
     "Trust": "Trust",
@@ -37,12 +31,14 @@
     "Total Supply of Tokens": "Total Supply of Tokens",
     "Token Sale Hard Cap": "oken Sale Hard Cap",
     "Rate": "Rate",
-    "Individual Min Eth": "Individual Min Eth",
     "Currencies Accepted": "Currencies Accepted",
     "Token Distribution": "Token Distribution",
     "Use of Process": "se of Process",
-    "New EtherDelta 2": {
-        "0": "New EtherDelta 2.0"
+    "System Development & Operation (35%)": "System Development & Operation (35%)",
+    "Marketing & Promotion (50%)": "Marketing & Promotion (50%)",
+    "Emergency Fund (15%)": "Emergency Fund (15%)",
+    "EtherDelta 2": {
+        "0": "EtherDelta 2"
     },
     "Mobile Platform": "Mobile Platform",
     "Development new generation exchnage on virable of platform inlcuding IOS and Android": "Development new generation exchnage on virable of platform inlcuding IOS and Android",
@@ -54,9 +50,10 @@
     "Next Generation wallet with embeded coin exchange feature": "Next Generation wallet with embeded coin exchange feature",
     "Mobile app user interface(UI) enhancement": "Mobile app user interface(UI) enhancement",
     "Team & Talent expanding": "Team & Talent expanding",
-    "New decentralized ICO platform released": "New decentralized ICO platform released",
+    "New decentralized TGE platform released": "New decentralized TGE platform released",
     "Increase the value of the wallet": "Increase the value of the wallet",
-    "An all star team with experts in blockchain, technology, legal, finance, marketing, and design": {
-        "0": "An all star team with experts in blockchain, technology, legal, finance, marketing, and design"
-    }
+    "The star team with experts in blockchain, technology, legal, finance and marketing": {
+        "0": "The star team with experts in blockchain, technology, legal, finance and marketing"
+    },
+    "Strong aivosr team in block chain world": "Strong aivosr team in block chain world"
 }

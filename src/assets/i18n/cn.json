@@ -1,29 +1,23 @@
 {
     "En": "英",
+    "DECENTRALIZED EXCHANGE": "去中心化交換",
+    "JOIN THE TRADING REVOLUTION": "加入交易革命",
     "Whitepaper": "白皮书",
     "Join Token Sale": "加入代币销售",
+    "Visit Exchange": "访问交易所",
+    "Partners": "合作伙伴",
+    "Cn": "中",
+    "Home": "主页",
     "About Us": "关于我们",
     "Token Sale": "Token销售",
     "Schedule": "里程碑",
-    "Cn": "中",
-    "Advisors": "顾问团队",
-    "Partners": "合作伙伴",
-    "Register": "注册",
-    "Visit Exchange": "訪问交易所",
-    "Home": "主页",
     "Team": "团队",
-    "As an open, multilateral trading platform that supports ERC20 tokens and smart contracts": {
-        " It is a decentralized trading platform that does not involve any centralized exchange or traditional asset management methodology": {
-            "0": ""
-        }
-    },
-    "We have positioned this platform as a future standard and an industry infrastructure that features the next generation of digital asset exchange": {
-        "0": ""
-    },
+    "Advisors": "顾问团队",
+    "Register": "注册",
     "Diversity": "多样性",
     "High number of coin selections": "硬币选择次数多",
     "Decentralization": "去中心化",
-    "Distributed transactions, globally none geographic restrictions": "分布式交易，全球无地域限制",
+    "distributed transactions, globally none geographic restrictions": "分布式交易，全球无地域限制",
     "Unlock KYC": "解锁KYC",
     "No registration and no complicated KYC process": "沒需注册，没有复杂的KYC程序",
     "Trust": "信任",
@@ -37,12 +31,14 @@
     "Total Supply of Tokens": "Tokens 总供应量",
     "Token Sale Hard Cap": "Token Sale Hard Cap",
     "Rate": "比例",
-    "Individual Min Eth": "Individual Min Eth",
     "Currencies Accepted": "接受货币",
     "Token Distribution": "Token分配",
     "Use of Process": "使用分配",
-    "New EtherDelta 2": {
-        "0": "以德 2.0"
+    "System Development & Operation (35%)": "系统开发与运营（35％）",
+    "Marketing & Promotion (50%)": "营销与推广（50％）",
+    "Emergency Fund (15%)": "紧急基金（15％）",
+    "EtherDelta 2": {
+        "0": "以徳 2.0"
     },
     "Mobile Platform": "手机平台",
     "Development new generation exchnage on virable of platform inlcuding IOS and Android": "开发新一代IOS平台和Android平台",
@@ -54,9 +50,10 @@
     "Next Generation wallet with embeded coin exchange feature": "下一代嵌入式硬币兑换功能的钱包",
     "Mobile app user interface(UI) enhancement": "新版手机平台应用界面（UI)",
     "Team & Talent expanding": "团队和人才拓展",
-    "New decentralized ICO platform released": "新版分散ICO平台发布",
+    "New decentralized TGE platform released": "新的分散式TGE平台发布",
     "Increase the value of the wallet": "增加钱包的价值",
-    "An all star team with experts in blockchain, technology, legal, finance, marketing, and design": {
-        "0": "全明星团队拥有区块链，技术，法律，金融，营销和设计专家"
-    }
+    "The star team with experts in blockchain, technology, legal, finance and marketing": {
+        "0": "明星团队拥有: 区块链， 技术， 法律， 金融和市场营销专家 "
+    },
+    "Strong aivosr team in block chain world": "强大的区块链世界顾问团队"
 }
