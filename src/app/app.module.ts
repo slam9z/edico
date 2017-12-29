@@ -28,7 +28,14 @@ import { AuthGuardService, AuthService } from './shared/services/index';
 import { AppRoutesModule } from './app-routes.module';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -47,15 +54,20 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-
     AngularFireAuthModule,
     ParticlesModule,
     ToastModule.forRoot(),
     ClipboardModule,
     NgbModule.forRoot(),
-
     AppRoutesModule,
-
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [AuthGuardService, AuthService],
   bootstrap: [AppComponent]

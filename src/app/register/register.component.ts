@@ -5,6 +5,7 @@ import { User } from '../shared/models/index';
 import { AuthService } from '../shared/services/auth.service';
 import { Router } from '@angular/router';
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-register',
@@ -22,9 +23,16 @@ export class RegisterComponent implements OnInit {
 
   isCopied = false;
   display = 'none';
-  constructor(private fb: FormBuilder, private authService: AuthService, private modalService: NgbModal) {
+  constructor(private fb: FormBuilder, private authService: AuthService,
+              private translate: TranslateService,
+              private modalService: NgbModal) {
     this.createForm();
     this.contractAddress = '0x01760d015473A4Fd33466F00f9A94405376565FD';
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('en');
    }
 
   ngOnInit() {

@@ -9,23 +9,40 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
             <!-- Logo -->
-            <a class="navbar-brand" href="index.html">EtherDelta</a>
+
+            <form class="navbar-form navbar-left">
+
+                <div class="input-group">
+                    <a class="navbar-brand" href="index.html">EtherDelta</a>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" (click)="switchLanguage('en')">
+                      <i class="glyphicon" translate>En</i>
+                    </button>
+                        <button class="btn btn-default" (click)="switchLanguage('cn')">
+                      <i class="glyphicon" translate>Cn</i>
+                    </button>
+                        <!--   <button class="btn btn-default" (click)="switchLanguage('jp')">
+                      <i class="glyphicon" translate>Jp</i>
+                    </button> -->
+                    </div>
+                </div>
+            </form>
             <!--<img src="assets/images/icon/title.png" alt="logo img">-->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav mu-menu navbar-right">
-                <li><a href="#mu-hero">Home</a></li>
-                <li><a href="#mu-about">About Us</a></li>
-                <li><a href="#mu-ico">Token Sale</a></li>
-                <li><a href="#mu-schedule">Schedule</a></li>
-                <li><a href="#mu-team">Team</a></li>
-                <li><a href="#mu-advisors">Advisors</a></li>
-                <li><a href="#mu-partners">Partners</a></li>
-                <li><a href="/register">Register</a></li>
+                <li><a href="#mu-hero" translate>Home</a></li>
+                <li><a href="#mu-about" translate>About Us</a></li>
+                <li><a href="#mu-ico" translate>Token Sale</a></li>
+                <li><a href="#mu-schedule" translate>Schedule</a></li>
+                <li><a href="#mu-team" translate>Team</a></li>
+                <li><a href="#mu-advisors" translate>Advisors</a></li>
+                <li><a href="#mu-partners" translate>Partners</a></li>
+                <li><a href="/register" translate>Register</a></li>
+
                 <!--<li><a href="/login">Login</a></li>
                 <li><a href="#mu-pricing">Price</a></li>
         <li><a href="#mu-speaker">Register</a></li>
@@ -85,13 +102,13 @@
                 </div>
 
                 <div class="mu-hero-featured-content">
-                    <button type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal ">
+                    <button type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal " translate>
             Whitepaper
           </button>
-                    <button type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal " (click)='gotoRegister()'>
+                    <button type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal " (click)='gotoRegister()' translate>
             Join Token Sale
           </button>
-                    <button type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal" (click)='gotoExchange()'>
+                    <button type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal" (click)='gotoExchange()' translate>
             Visit Exchange
           </button>
                 </div>

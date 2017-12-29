@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './app-navbar.component.html',
@@ -11,9 +12,16 @@ export class AppNavbarComponent implements OnInit {
   width = 100;
   height = 100;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private translate: TranslateService) {
 
+  }
 
+  switchLanguage(language: string) {
+    this.translate.onDefaultLangChange.subscribe((event: DefaultLangChangeEvent) => {
+
+    });
+    this.translate.use(language);
+  }
 
   ngOnInit() {
     this.myStyle = {

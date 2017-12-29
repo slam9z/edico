@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="b4b78885911200db2de0854e46db64f4953c0521" datatype="html">
+        <source> As an open, multilateral trading platform that supports ERC20 tokens and smart contracts. It is a decentralized trading platform that does not involve any centralized exchange or traditional asset management methodology.
+                                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="648dbdb13ddfca0db0cfd8f3148ea2bef0a7c63d" datatype="html">
+        <source> We have positioned this platform as a future standard and an industry infrastructure that features the next generation of digital asset exchange.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="decentrializedHeader" datatype="html">
+        <source>Decentralization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="48caa93f52793d30e9e760d4237eabeb10aab48a" datatype="html">
+        <source>Distributed transactions, globally none geographic restrictions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2b1dfcad5d2281ef091f5c831d8ba6962ddc0b53" datatype="html">
+        <source>Unlock KYC</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ff56b2ecd453d1e5215a2c199811e1ab9171025b" datatype="html">
+        <source>No registration and no complicated KYC process</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
