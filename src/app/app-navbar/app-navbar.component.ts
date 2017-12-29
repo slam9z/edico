@@ -66,4 +66,11 @@ gotoExchange() {
    );
 }
 
+downloadWP() {
+   window.open(
+     '/assets/whitepaper/EtherDeltaEnglish.pdf',
+     '_blank' // <- This is what makes it open in a new window.
+   );
+}
+
 }

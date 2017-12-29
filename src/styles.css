@@ -443,7 +443,7 @@ button:focus {
 }
 
 #mu-hero .navbar-default .navbar-brand {
-    padding: 15px 15px;
+    padding: 10px 10px;
     font-size: 28px;
     line-height: 20px;
 }
@@ -512,7 +512,7 @@ button:focus {
     color: #1c1b1b;
     margin-bottom: 15px;
     padding: 0;
-    z-index: 10;
+    z-index: 5;
     text-transform: capitalize;
 }
 
