@@ -5,10 +5,11 @@
 		"0": ""
 	},
 	"As an open, multilateral trading platform that supports ERC20 tokens and smart contracts": {
-		"0": ""
+		" It is a decentralized trading platform that does not involve any centralized exchange or traditional asset management methodology": {
+			"0": ""
+		}
 	},
 	"Bitcoin Transaction": "比特币交易",
-	"Cn": "中",
 	"Currencies Accepted": "接受货币",
 	"DECENTRALIZED EXCHANGE": "去中心化交易所",
 	"Decentralization": "去中心化",
@@ -16,7 +17,6 @@
 	"Distributed transactions, globally none geographic restrictions": "分布式交易，全球无地域限制",
 	"Diversity": "多样性",
 	"Emergency Fund (15%)": "",
-	"En": "英",
 	"EtherDelta 2": {
 		"0": "以德 2.0"
 	},
@@ -28,10 +28,7 @@
 	"Home": "主页",
 	"Impartial": "公正",
 	"Increase the value of the wallet": "增加钱包的价值",
-	"It is a decentralized trading platform that does not involve any centralized exchange or traditional asset management methodology": {
-		"0": ""
-	},
-	"JOIN THE TRADING REVOLUTION": "和我們一起掀起一場經濟革命",
+	"Language": "",
 	"Low trust and operational costs": "沒需信用等級验证, 低运营成本",
 	"Marketing & Promotion (50%)": "",
 	"Mobile Platform": "手机平台",
@@ -50,14 +47,16 @@
 	"Team": "团队",
 	"Team & Talent expanding": "团队和人才拓展",
 	"Token Distribution": "Token分配",
+	"Token Generation Event Start In": "",
 	"Token Sale": "Token销售",
 	"Token Sale Hard Cap": "Token Sale Hard Cap",
-	"Tokens Sale": "Tokens 銷售",
 	"Total Supply of Tokens": "Tokens 总供应量",
 	"Trust": "信任",
 	"Unlock KYC": "解锁KYC",
 	"Use of Process": "使用分配",
 	"Visit Exchange": "访问交易所",
-	"download Whitepaper": "download Whitepapaer",
-	"partners": "partners"
+	"We have positioned this platform as a future standard and an industry infrastructure that features the next generation of digital asset exchange": {
+		"0": ""
+	},
+	"Whitepaper": ""
 }

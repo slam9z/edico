@@ -5,10 +5,11 @@
 		"0": ""
 	},
 	"As an open, multilateral trading platform that supports ERC20 tokens and smart contracts": {
-		"0": ""
+		" It is a decentralized trading platform that does not involve any centralized exchange or traditional asset management methodology": {
+			"0": ""
+		}
 	},
 	"Bitcoin Transaction": "Bitcoin Transaction",
-	"Cn": "中",
 	"Currencies Accepted": "Currencies Accepted",
 	"DECENTRALIZED EXCHANGE": "",
 	"Decentralization": "Decentralization",
@@ -16,7 +17,6 @@
 	"Distributed transactions, globally none geographic restrictions": "Distributed transactions, globally none geographic restrictions",
 	"Diversity": "Diversity",
 	"Emergency Fund (15%)": "Emergency Fund (15%)",
-	"En": "EN",
 	"EtherDelta 2": {
 		"0": "EtherDelta 2"
 	},
@@ -28,10 +28,7 @@
 	"Home": "Home",
 	"Impartial": "Impartial",
 	"Increase the value of the wallet": "Increase the value of the wallet",
-	"It is a decentralized trading platform that does not involve any centralized exchange or traditional asset management methodology": {
-		"0": ""
-	},
-	"JOIN THE TRADING REVOLUTION": "JOIN THE TRADING REVOLUTION",
+	"Language": "",
 	"Low trust and operational costs": "Low trust and operational costs",
 	"Marketing & Promotion (50%)": "Marketing & Promotion (50%)",
 	"Mobile Platform": "Mobile Platform",
@@ -50,14 +47,16 @@
 	"Team": "Team",
 	"Team & Talent expanding": "Team & Talent expanding",
 	"Token Distribution": "Token Distribution",
+	"Token Generation Event Start In": "",
 	"Token Sale": "Token Sale",
 	"Token Sale Hard Cap": "oken Sale Hard Cap",
-	"Tokens Sale": "Tokens Sale",
 	"Total Supply of Tokens": "Total Supply of Tokens",
 	"Trust": "Trust",
 	"Unlock KYC": "nlock KYC",
 	"Use of Process": "se of Process",
 	"Visit Exchange": "Visit Exchange",
-	"download Whitepaper": "download Whitepaper",
-	"partners": "partners"
+	"We have positioned this platform as a future standard and an industry infrastructure that features the next generation of digital asset exchange": {
+		"0": ""
+	},
+	"Whitepaper": ""
 }
