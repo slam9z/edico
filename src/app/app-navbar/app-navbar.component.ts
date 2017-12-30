@@ -21,7 +21,8 @@ export class AppNavbarComponent implements OnInit {
     }
   }
 
-  switchLanguageEn() {
+  switchLanguageEn(language: string) {
+    console.log('{switchLanguageEn }:', language);
     this.translate.use('en');
 
   }
@@ -77,7 +78,6 @@ gotoExchange() {
 }
 
 downloadWP() {
-  console.log(this.translate.currentLang);
 
   if (this.translate.currentLang  === 'cn') {
     this.url_link = '/assets/whitepaper/etherdeltasimchinese.pdf';
