@@ -14,7 +14,7 @@ export class AppNavbarComponent implements OnInit {
   height = 100;
 
   private lang_in_use: any;
-  private url_link = '/assets/whitepaper/EtherDeltaEnglish.pdf';
+  private url_link = '/assets/whitepaper/etherdeltaenglish.pdf';
   constructor(private router: Router, private translate: TranslateService) {
     if (this.translate.getDefaultLang === undefined) {
       this.translate.setDefaultLang('en');
@@ -80,7 +80,7 @@ downloadWP() {
   console.log(this.translate.currentLang);
 
   if (this.translate.currentLang  === 'cn') {
-    this.url_link = '/assets/whitepaper/EtherDeltaSimplifiedChinese.pdf';
+    this.url_link = '/assets/whitepaper/etherdeltasimchinese.pdf';
   }
    window.open(
      this.url_link ,
