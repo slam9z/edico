@@ -80,7 +80,7 @@ downloadWP() {
   console.log(this.translate.currentLang);
 
   if (this.translate.currentLang  === 'cn') {
-    this.url_link = '/assets/whitepaper/cn/EtherDeltaEnglish.pdf';
+    this.url_link = '/assets/whitepaper/EtherDeltaSimplifiedChinese.pdf';
   }
    window.open(
      this.url_link ,

@@ -67,6 +67,7 @@ body {
 ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 ul li {
@@ -135,7 +136,8 @@ h6 {
 
 .slogon-logo {
     border: none;
-    max-width: 90%;
+    max-width: 60%;
+    padding: 0 0 10px;
 }
 
 img {
@@ -353,6 +355,12 @@ button:focus {
 }
 
 .mu-hero-featured-content h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 250;
+}
+
+.mu-hero-featured-content h4 {
     color: #fff;
     font-size: 20px;
     font-weight: 250;
@@ -813,7 +821,7 @@ button:focus {
 /*--------------------*/
 
 #mu-team {
-    background-color: #fff;
+    background-color: rgba(51, 51, 51, 0.7);
     display: inline;
     float: left;
     width: 100%;
@@ -1587,7 +1595,7 @@ button:focus {
 /*--------------------*/
 
 #mu-footer {
-    background-color: #f8f8f8;
+    background-color: #1c1b1b;
     display: inline;
     float: left;
     width: 100%;
@@ -2016,4 +2024,42 @@ button:focus {
     h2 {
         font-size: 22px;
     }
+}
+
+.side-nav-bar {
+    position: fixed;
+    right: 0;
+    top: 36%;
+}
+
+.side-nav-bar-ul li {
+    padding: 0.06em 0.5em;
+    background: #008FD7;
+    border-radius: 50%;
+    margin: 10px 5px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.side-nav-bar-ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon-twitter:before {
+    content: "\f099";
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
