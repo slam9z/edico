@@ -22,7 +22,6 @@ export class AppNavbarComponent implements OnInit {
   }
 
   switchLanguageEn(language: string) {
-    console.log('{switchLanguageEn }:', language);
     this.translate.use('en');
 
   }
