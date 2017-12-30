@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
       this.authService.signup(this.user)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           this.router.navigate(['dashboard']);
         })
         .catch((err) => console.log('error: ' + err));

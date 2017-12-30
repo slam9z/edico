@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   switchLanguage(language: string) {
-    console.log('onDefaultLangChange ', this.translate.getLangs);
-    console.log(language);
+
     this.translate.use(language);
   }
 }
