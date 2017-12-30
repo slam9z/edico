@@ -67,10 +67,11 @@ body {
 ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 ul li {
-    list-style: disc;
+    list-style: none;
     font-size: 17px;
     line-height: 1.59;
 }
@@ -254,9 +255,10 @@ button:focus {
 
 
 /* HEADER */
+
 .mu-slogon {
-  display: inline-block;
-  padding: 0 0 15px;
+    display: inline-block;
+    padding: 0 0 15px;
 }
 
 
@@ -819,7 +821,7 @@ button:focus {
 /*--------------------*/
 
 #mu-team {
-    background-color: rgba(51, 51, 51, 0.7);
+    /* background-color: rgba(51, 51, 51, 0.7); */
     display: inline;
     float: left;
     width: 100%;
@@ -1238,6 +1240,7 @@ button:focus {
     transition: all 0.5s;
 }
 
+
 /*--------------------*/
 
 #mu-ico {
@@ -1596,6 +1599,7 @@ button:focus {
     display: inline;
     float: left;
     width: 100%;
+    color: #fff;
 }
 
 .mu-footer-area {
@@ -1604,6 +1608,10 @@ button:focus {
     padding: 30px 0;
     text-align: center;
     width: 100%;
+}
+
+.mu-footer-area a {
+    color: #fff;
 }
 
 .mu-footer-top {
@@ -1673,7 +1681,6 @@ button:focus {
         max-width: 70%;
         padding: 0 0 10px;
     }
-
     .mu-register-content {
         padding: 0 150px;
     }
@@ -1694,12 +1701,14 @@ button:focus {
 }
 
 @media (max-width: 991px) {
+    .dropdown-menu li:hover .dropdown-menu {
+        position: static;
+    }
     .slogon-logo {
         border: none;
         max-width: 20%;
         padding: 0 0 10px;
     }
-
     .mu-primary-btn {
         font-size: 14px;
         padding: 12px 22px;
@@ -1794,13 +1803,11 @@ button:focus {
 }
 
 @media (max-width: 767px) {
-
     .slogon-logo {
         border: none;
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-logo img {
         width: 150px;
     }
@@ -1824,7 +1831,6 @@ button:focus {
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-event-counter-block {
         height: 100px;
         width: 100px;
@@ -1962,13 +1968,11 @@ button:focus {
     .mu-logo img {
         width: 50px;
     }
-
     .slogon-logo {
         border: none;
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-hero-featured-area {
         padding: 30px 0 30px;
     }
@@ -2011,13 +2015,11 @@ button:focus {
     .mu-video-iframe-area {
         padding: 30% 5%;
     }
-
     .slogon-logo {
         border: none;
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-event-timeline ul li .mu-single-event,
     .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event,
     .mu-event-timeline ul li:nth-child(2n) .mu-single-event {
@@ -2029,29 +2031,33 @@ button:focus {
     }
 }
 
-.side-nav-bar{
-  position:fixed; right:0; top:36%;
+.side-nav-bar {
+    position: fixed;
+    right: 0;
+    top: 36%;
 }
 
-.side-nav-bar-ul li{
-  padding: 0.06em 0.5em;
-  background: #008FD7;
-  border-radius: 50%;
-  margin: 10px 5px;
-  text-align: center;
-  list-style-type: none;
+.side-nav-bar-ul li {
+    padding: 0.06em 0.5em;
+    background: #008FD7;
+    border-radius: 50%;
+    margin: 10px 5px;
+    text-align: center;
+    list-style-type: none;
 }
-.side-nav-bar-ul li a{
-  font-size: 20px;
-  text-decoration:
-   none; color:#fff;
+
+.side-nav-bar-ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .icon-twitter:before {
     content: "\f099";
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
     font-family: 'icomoon';
     speak: none;
     font-style: normal;

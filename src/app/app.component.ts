@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
@@ -7,15 +7,15 @@ import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'EtherDelta ICO';
-
+  @Output()
+  inUseLang: EventEmitter<string> = new EventEmitter<string>();
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
   }
 
   switchLanguage(language: string) {
-    this.translate.onDefaultLangChange.subscribe((event: DefaultLangChangeEvent) => {
-      console.log('onDefaultLangChange ', this.translate.getLangs);
-    });
+
     this.translate.use(language);
+
   }
 }
