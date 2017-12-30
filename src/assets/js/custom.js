@@ -31,12 +31,27 @@
 
     jQuery(window).bind('scroll', function() {
         if ($(window).scrollTop() > 150) {
+
             $('.mu-navbar').addClass('mu-nav-show');
 
         } else {
+
             $('.mu-navbar').removeClass('mu-nav-show');
         }
     });
+
+    jQuery(window).bind('resize', function() {
+
+        if ($('.navbar-toggle').is(":visible") === 'true') {
+
+            $("#bs-example-navbar-collapse-1").find(".mobileView").show()
+            $("#bs-example-navbar-collapse-1").find(".normalView").hide()
+        } else {
+            $("#bs-example-navbar-collapse-1").find(".mobileView").hide()
+            $("#bs-example-navbar-collapse-1").find(".normalView").show()
+        }
+
+    })
 
     /* ----------------------------------------------------------- */
     /*  2. EVENT TIME COUNTER
@@ -216,4 +231,6 @@
         $("#bs-example-navbar-collapse-1").find(".mobileView").show()
         $("#bs-example-navbar-collapse-1").find(".normalView").hide()
     });
+
+
 })(jQuery);
