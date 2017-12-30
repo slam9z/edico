@@ -1,5 +1,6 @@
 @import "~assets/css/theme-color/jelly-bean-theme.css";
 @import "~assets/css/animates.css";
+@import "~assets/css/icon.css";
 .dot {
     border: 10px solid #ffffff;
     background: transparent;
@@ -25,6 +26,7 @@ a.navbar-brand {
     height: 50px;
     padding: 0;
 }
+
 
 /* ARROW */
 

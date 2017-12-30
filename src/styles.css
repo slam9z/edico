@@ -253,9 +253,10 @@ button:focus {
 
 
 /* HEADER */
+
 .mu-slogon {
-  display: inline-block;
-  padding: 0 0 15px;
+    display: inline-block;
+    padding: 0 0 15px;
 }
 
 
@@ -1231,6 +1232,7 @@ button:focus {
     transition: all 0.5s;
 }
 
+
 /*--------------------*/
 
 #mu-ico {
@@ -1666,7 +1668,6 @@ button:focus {
         max-width: 70%;
         padding: 0 0 10px;
     }
-
     .mu-register-content {
         padding: 0 150px;
     }
@@ -1687,12 +1688,14 @@ button:focus {
 }
 
 @media (max-width: 991px) {
+    .dropdown-menu li:hover .dropdown-menu {
+        position: static;
+    }
     .slogon-logo {
         border: none;
         max-width: 20%;
         padding: 0 0 10px;
     }
-
     .mu-primary-btn {
         font-size: 14px;
         padding: 12px 22px;
@@ -1787,13 +1790,11 @@ button:focus {
 }
 
 @media (max-width: 767px) {
-
     .slogon-logo {
         border: none;
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-logo img {
         width: 150px;
     }
@@ -1817,7 +1818,6 @@ button:focus {
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-event-counter-block {
         height: 100px;
         width: 100px;
@@ -1955,13 +1955,11 @@ button:focus {
     .mu-logo img {
         width: 50px;
     }
-
     .slogon-logo {
         border: none;
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-hero-featured-area {
         padding: 30px 0 30px;
     }
@@ -2004,13 +2002,11 @@ button:focus {
     .mu-video-iframe-area {
         padding: 30% 5%;
     }
-
     .slogon-logo {
         border: none;
         max-width: 30%;
         padding: 0 0 10px;
     }
-
     .mu-event-timeline ul li .mu-single-event,
     .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event,
     .mu-event-timeline ul li:nth-child(2n) .mu-single-event {

@@ -71,33 +71,80 @@ p.credits {
 .fab-buttons:nth-last-child(1) {
     -webkit-transition-delay: 25ms;
     transition-delay: 25ms;
-    background-image: url('https://cbwconline.com/IMG/Share.svg');
+    /* background-image: url('https://cbwconline.com/IMG/Share.svg'); */
     background-size: contain;
 }
 
 .fab-buttons:not(:last-child):nth-last-child(2) {
     -webkit-transition-delay: 50ms;
     transition-delay: 20ms;
-    background-image: url('https://cbwconline.com/IMG/Facebook-Flat.png');
+    /* background-image: url('https://cbwconline.com/IMG/Facebook-Flat.png'); */
     background-size: contain;
 }
 
 .buttons:not(:last-child):nth-last-child(3) {
     -webkit-transition-delay: 75ms;
     transition-delay: 40ms;
-    background-image: url('https://cbwconline.com/IMG/Twitter-Flat.png');
-    background-size: contain;
+    /* background-image: url('https://cbwconline.com/IMG/Twitter-Flat.png');
+    background-size: contain; */
 }
 
 .fab-buttons:not(:last-child):nth-last-child(4) {
     -webkit-transition-delay: 100ms;
     transition-delay: 60ms;
-    background-image: url('https://cbwconline.com/IMG/Google%20Plus.svg');
-    background-size: contain;
+    /* background-image: url('https://cbwconline.com/IMG/Google%20Plus.svg');
+    background-size: contain; */
 }
 
 
 /* Show tooltip content on hover */
+
+a.tooltip {
+    outline: none;
+}
+
+a.tooltip strong {
+    line-height: 30px;
+}
+
+a.tooltip:hover {
+    text-decoration: none;
+}
+
+a.tooltip span {
+    z-index: 10;
+    display: none;
+    padding: 14px 20px;
+    margin-top: 60px;
+    margin-left: -160px;
+    width: 300px;
+    line-height: 16px;
+}
+
+a.tooltip:hover span {
+    display: inline;
+    position: absolute;
+    border: 2px solid #FFF;
+    color: #EEE;
+    background: #333 url(http://www.menucool.com/tooltip/cssttp/css-tooltip-gradient-bg.png) repeat-x 0 0;
+}
+
+.callout {
+    z-index: 20;
+    position: absolute;
+    border: 0;
+    top: -14px;
+    left: 120px;
+}
+
+
+/*CSS3 extras*/
+
+a.tooltip span {
+    border-radius: 2px;
+    box-shadow: 0px 0px 8px 4px #666;
+    /*opacity: 0.8;*/
+}
 
 [tooltip]:before {
     bottom: 25%;

@@ -1,0 +1,39 @@
+/** icon cn **/
+
+.icon-cn-lang .path1:before {
+    content: "\1f311";
+    color: #de2910;
+}
+
+.icon-cn-lang .path2:before {
+    content: "\1f312";
+    color: #fbe013;
+    margin-left: -1.5em;
+}
+
+.icon-cn-lang .path3:before {
+    content: "\1f313";
+    color: #fbe013;
+    margin-left: -1.5em;
+}
+
+.icon-cn-lang .path4:before {
+    content: "\1f314";
+    color: #fbe013;
+    margin-left: -1.5em;
+}
+
+.icon-cn-lang .path5:before {
+    content: "\1f315";
+    color: #fbe013;
+    margin-left: -1.5em;
+}
+
+.icon-cn-lang .path6:before {
+    content: "\1f316";
+    color: #fbe013;
+    margin-left: -1.5em;
+}
+
+
+/*****/

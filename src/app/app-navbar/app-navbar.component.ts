@@ -9,21 +9,31 @@ import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
 export class AppNavbarComponent implements OnInit {
   myStyle: object = {};
   myParams: object = {};
+
   width = 100;
   height = 100;
 
+  private lang_in_use: any;
+  private url_link = '/assets/whitepaper/EtherDeltaEnglish.pdf';
   constructor(private router: Router, private translate: TranslateService) {
+    if (this.translate.getDefaultLang === undefined) {
+      this.translate.setDefaultLang('en');
+    }
+  }
+
+  switchLanguageEn() {
+    this.translate.use('en');
 
   }
 
-  switchLanguage(language: string) {
-    this.translate.onDefaultLangChange.subscribe((event: DefaultLangChangeEvent) => {
+  switchLanguageCn() {
+    this.translate.use('cn');
 
-    });
-    this.translate.use(language);
   }
-
   ngOnInit() {
+
+
+
     this.myStyle = {
       'position': 'fixed',
       'width': '100%',
@@ -67,8 +77,13 @@ gotoExchange() {
 }
 
 downloadWP() {
+  console.log(this.translate.currentLang);
+
+  if (this.translate.currentLang  === 'cn') {
+    this.url_link = '/assets/whitepaper/cn/EtherDeltaEnglish.pdf';
+  }
    window.open(
-     '/assets/whitepaper/EtherDeltaEnglish.pdf',
+     this.url_link ,
      '_blank' // <- This is what makes it open in a new window.
    );
 }
