@@ -203,7 +203,15 @@
         $('.mu-navbar .in').collapse('hide');
     });
 
-
+    jQuery('.wechat').on('click', function() {
+        console.log('wechat is clicked.');
+        console.log($(".wechatCord").css("display"));
+        if ($(".wechatCord").css("display") == "none") {
+            $('.wechatCord').show()
+        } else {
+            $('.wechatCord').hide()
+        }
+    });
 
 
 

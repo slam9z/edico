@@ -2035,6 +2035,7 @@ button:focus {
     position: fixed;
     right: 0;
     top: 36%;
+    z-index: 10;
 }
 
 .side-nav-bar-ul li {
@@ -2067,4 +2068,16 @@ button:focus {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.wechatCord {
+    position: absolute;
+    bottom: -29px;
+    right: 40px;
+    width: 300%;
+    display: none;
+}
+
+.icon-wechat:before {
+    content: "\f1d7";
 }
