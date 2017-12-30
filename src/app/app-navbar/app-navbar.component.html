@@ -3,36 +3,27 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+            <button id="toggleBar" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
             <!-- Logo -->
-            <a class="navbar-brand navbar-light bg-light" href="index.html"><img src="assets/images/icon/title.png" width="175px" class="d-inline-block align-top" alt="logo img"></a>
+            <a class="navbar-brand navbar-light bg-light" href="#"><img src="assets/images/icon/title.png" width="175px" class="d-inline-block align-top" alt="logo img"></a>
 
             <!--<img src="assets/images/icon/title.png" alt="logo img">-->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <ul class="nav navbar-nav mu-menu navbar-left">
-                <li class="nav-item  dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" id="navbarDropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="true">
-                        <i class="fa fa-globe"></i>
-                        <span class="caret"></span></a>
-
-                    <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                        <a class="dropdown-toggle" role="button" data-toggle="collapse" (click)="switchLanguageEn()"><span><img id="img-enlang" src="assets/images/icon/enlang-icon.png"/></span>EN</a>
-                        <a class="dropdown-toggle" role="button" data-toggle="collapse" (click)="switchLanguageCn()"><span><img id="img-cnlang" src="assets/images/icon/cn-lang.png"/></span>中文</a>
-                    </div>
-
-                </li>
-            </ul>
-
             <ul class="nav navbar-nav mu-menu navbar-right" style="list-style:none">
+                <div class="mobileView" style="display:none">
+                    <li>
+                        <a role="button" (click)="switchLanguageEn()"><span><img id="img-enlang" src="assets/images/icon/enlang-icon.png"/></span>EN</a>
+                        <a role="button" (click)="switchLanguageCn()"><span><img id="img-cnlang" src="assets/images/icon/cn-lang.png"/></span>中文</a>
+                    </li>
+                </div>
                 <li><a href="#mu-hero" translate>Home</a></li>
                 <li><a href="#mu-about" translate>About Us</a></li>
                 <li><a href="#mu-ico" translate>Token Sale</a></li>
@@ -40,11 +31,23 @@
                 <li><a href="#mu-team" translate>Team</a></li>
                 <li><a href="#mu-advisors" translate>Advisors</a></li>
                 <li><a href="#mu-partners" translate>Partners</a></li>
+                <li class="dropdown normalView">
+                    <a class="dropdown-toggle" data-toggle="dropdown" translate>
+                        <i class="fa fa-globe"></i>Language
+                        <span class="caret"></span></a>
+                    <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                        <a role="button" (click)="switchLanguageEn()"><span><img id="img-enlang" src="assets/images/icon/enlang-icon.png"/></span>EN</a>
+                        <a role="button" (click)="switchLanguageCn()"><span><img id="img-cnlang" src="assets/images/icon/cn-lang.png"/></span>中文</a>
+                    </div>
+                </li>
+
+                <!--<li><a href="/register" translate>Register</a></li>-->
 
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
+    <!-- /.navbar-collapse -->
 
     <!-- /.container-fluid -->
 </nav>
@@ -63,10 +66,9 @@
             </a>
         </li>
         <li class="wechat"><a><i class="fa fa-wechat"></i>
-      <div class="wechatCord">
-        <img src="assets/images/wechatqr.jpg" alt="" style="width:100px;">
-      </div>
-    </a></li>
+        <div class="wechatCord">
+            <img src="assets/images/wechatqr.jpg" alt="" style="width:100px;">
+        </div></a></li>
 
     </ul>
 </div>
@@ -107,11 +109,9 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal " (click)='downloadWP()' translate>Whitepaper
-                    </button>
+                                        <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal " (click)='downloadWP()' translate>Whitepaper</button>
 
-                                        <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal" (click)='gotoExchange()' translate>Visit Exchange
-                    </button>
+                                        <button translate type=" button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal" (click)='gotoExchange()' translate>Visit Exchange</button>
                                     </div>
                                 </div>
 
@@ -125,5 +125,4 @@
             </div>
         </div>
     </div>
-
 </div>

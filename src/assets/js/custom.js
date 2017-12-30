@@ -212,8 +212,8 @@
         }
     });
 
-
-
-
-
+    jQuery('.navbar-toggle').on('click', function() {
+        $("#bs-example-navbar-collapse-1").find(".mobileView").show()
+        $("#bs-example-navbar-collapse-1").find(".normalView").hide()
+    });
 })(jQuery);
