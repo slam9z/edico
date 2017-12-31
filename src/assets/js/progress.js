@@ -1,7 +1,7 @@
 /// utility methods
 const writeValue = (elementId, value) => document.getElementById(elementId).textContent = value;
 const weiToEther = wei => wei / 10**18;
-const totalEther = 150000/8500;
+const totalEther = 750000000/8500;
 const percent = ether => (ether / totalEther * 100).toFixed(1);
 
 //const targetApi = 'https://ropsten.infura.io/Kgx1nx3BuoZLPDNH2RkK';
