@@ -247,5 +247,10 @@
         $("#bs-example-navbar-collapse-1").find(".normalView").hide()
     });
 
+    $("#login-button").click(function(event) {
+        event.preventDefault();
 
+        $('form').fadeOut(500);
+        $('.wrapper').addClass('form-success');
+    });
 })(jQuery);
