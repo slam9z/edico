@@ -56,7 +56,7 @@
 
     //count Down Date
 
-    var countDownDate = new Date("Jan 01, 2018 00:00:00 UTC+8").getTime();
+    var countDownDate = new Date("Jan 15, 2018 00:00:00 UTC+8").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
