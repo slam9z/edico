@@ -63,7 +63,7 @@
 
         // Get todays date and time
         var now = new Date().getTime();
-
+        console.log('now: ', new Date());
         // Find the distance between now an the count down date
         var distance = countDownDate - now;
 
