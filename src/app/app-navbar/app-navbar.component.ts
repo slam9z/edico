@@ -66,7 +66,24 @@ export class AppNavbarComponent implements OnInit {
   }
 
 gotoRegister() {
-  this.router.navigate(['register']);
+  $.ajax({
+    url: "http://ip-api.com/json",
+    type: 'GET',
+    success: function(json)
+    {
+       console.log("My country is: " + json.country);
+       if(json.country == "United States") {
+          alert("We detect your IP belongs to US citizen or resident, whose legislation conflicts with joining the current sales event. We apologize for the inconvenience ");
+       } else {
+          this.router.navigate(['register']);
+       }
+    },
+    error: function(err)
+    {
+      console.log("Request failed, error= " + err);
+    }
+  });
+
 }
 
 gotoExchange() {
