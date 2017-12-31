@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Http } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
+
+import{ Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-navbar',
   templateUrl: './app-navbar.component.html',
@@ -66,6 +68,7 @@ export class AppNavbarComponent implements OnInit {
   }
 
 gotoRegister() {
+
   $.ajax({
     url: "http://ip-api.com/json",
     type: 'GET',
@@ -83,6 +86,7 @@ gotoRegister() {
       console.log("Request failed, error= " + err);
     }
   });
+
 
 }
 

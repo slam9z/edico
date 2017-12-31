@@ -1,4 +1,8 @@
-/// utility methods
+(function($) {
+
+    var x = setInterval(function() {
+// utility methods
+
 const writeValue = (elementId, value) => document.getElementById(elementId).textContent = value;
 const weiToEther = wei => wei / 10**18;
 const totalEther = 750000000/8500;
@@ -22,3 +26,6 @@ let etherPercent = percent(totalRaised) + '%';
 $('#progress-solid-line').css('width', etherPercent);
 //$('#progress').text((progress * 100).toFixed(1) + '%').css('left', progress * 338 - 30 + 'px');
 //$('#eth-amount').text(res.eth);
+},
+1000);
+})(jQuery);
