@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
               private translate: TranslateService,
               private modalService: NgbModal) {
     this.createForm();
-    this.contractAddress = '0x01760d015473A4Fd33466F00f9A94405376565FD';
+    this.contractAddress = '0xCe53a179047ebed80261689367c093C90A94cC08';
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
 

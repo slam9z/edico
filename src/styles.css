@@ -1059,6 +1059,18 @@ button:focus {
     width: 100%;
     padding: 15px;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    -webkit-animation: fadeIn 1s ease-out;
+    -moz-animation: fadeIn 1s ease-out;
+    animation: fadeIn 1s ease-out;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.mu-single-price:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
 .mu-single-price-head {
@@ -2073,6 +2085,15 @@ button:focus {
 }
 
 .wechatCord {
+    position: absolute;
+    bottom: -29px;
+    right: 40px;
+    width: 300%;
+    display: none;
+}
+
+.contractAddressQR {
+    background-image: url('/assets/images/ED_TGE_QR.png');
     position: absolute;
     bottom: -29px;
     right: 40px;
