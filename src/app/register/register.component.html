@@ -1,7 +1,7 @@
 <main role="main">
 
     <section id="mu-login">
-        <div class="container login-padding-top login-margin ">
+        <div class=" login-padding-top login-margin ">
             <div class="login_box wrapperCenter">
 
                 <div class="col-md-12 col-xs-12" align="center">
@@ -78,24 +78,32 @@
                                         <div>
                                             <label></label>
                                         </div>
-                                        <div *ngIf="showEDT" class="input-group">
-                                            <div class="line"></div>
-                                            <input type="text" #inputTarget class="form-control form-control-offset" disabled [value]="contractAddress">
+                                        <div *ngIf="showEDT">
+                                            <div class="input-group">
+                                                <div class="line"></div>
 
-                                            <span class="input-group-btn">
+
+                                                <input type="text" #inputTarget class="form-control form-control-offset" disabled [value]="contractAddress">
+
+                                                <span class="input-group-btn">
                                       <button class="btn btn-default" [class.btn-success]= "isCopied" type="button" ngxClipboard [cbContent]="contractAddress" (cbOnSuccess)="isCopied = true">copy</button>
-                                    </span>
-                                        </div>
 
+                                            </span>
+
+                                            </div>
+                                            <div class="row wrapper">
+                                                <div class="col-md-12 "><img class="center-block" src="assets/images/ED_TGE_QR.png" /></div>
+                                            </div>
+                                        </div>
                                     </ngb-alert>
+
                                 </div>
                             </div>
 
                         </div>
                     </div>
                     <div>
-                        <label></label>
-                        <label></label>
+
                     </div>
                 </form>
 

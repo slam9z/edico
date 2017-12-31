@@ -2093,12 +2093,8 @@ button:focus {
 }
 
 .contractAddressQR {
-    background-image: url('/assets/images/ED_TGE_QR.png');
     position: absolute;
-    bottom: -29px;
-    right: 40px;
-    width: 300%;
-    display: none;
+    display: block;
 }
 
 .icon-wechat:before {
