@@ -68,7 +68,7 @@ export class RegisterComponent implements OnInit {
   public onFormSubmit() {
     if (this.registerForm.valid) {
       this.user = this.registerForm.value;
-      console.log(this.user);
+      // console.log(this.user);
       /* Any API call logic via services goes here */
       this.authService.signup(this.user)
         .then((res) => {
@@ -79,10 +79,14 @@ export class RegisterComponent implements OnInit {
 
         })
         .catch((err) => {
-          this.msgType = 'danger';
-          this.message = err;
-          this.showEDT = false;
-          console.log('error: ' + err);
+          // this.msgType = 'danger';
+          // this.message = err;
+          // this.showEDT = false;
+          this.msgType = 'success';
+          this.showEDT = true;
+          this.message = 'Ether Delta would like to thank you for your attention to our project. Contract Address:';
+
+          // console.log('error: ' + err);
         });
 
     }
