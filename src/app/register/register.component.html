@@ -43,7 +43,7 @@
                                 </div>
 
                                 <div style="border: 1px solid #e5e5e5; height: 450px; overflow: scroll; padding: 1px;text-align: center;">
-                                    <pdf-viewer src="assets/whitepaper/Term_Agreement.pdf" [show-all]="false" [page]="page" [zoom]="zoom" [fit-to-page]="true" [autoresize]="true" (after-load-complete)="afterLoadComplete($event)">
+                                    <pdf-viewer src="assets/whitepaper/Term_Agreement.pdf" [show-all]="false" [page]="page" [zoom]="0.1" [fit-to-page]="true" [autoresize]="true" (after-load-complete)="afterLoadComplete($event)">
                                     </pdf-viewer>
 
                                 </div>
@@ -52,7 +52,7 @@
                         <div class="control">
                             <div class="form-group">
                                 <div class="checkbox login-padding-left">
-                                    <label><input type="checkbox" name="agreement" formControlName="agreement" value=""> I Agree with the terms and conditions</label>
+                                    <label><input type="checkbox" name="agreement" formControlName="agreement" value=""> I have read, understand, and agree to abide by the terms of the EtherDelta Decentralized exchange agreement.</label>
                                 </div>
                             </div>
                         </div>

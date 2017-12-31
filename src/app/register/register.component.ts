@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   display = 'none';
 
   page = 1;
-  zoom = 0.5;
+
   totalPages: number;
   isLoaded= false;
   constructor(private fb: FormBuilder, private authService: AuthService,
@@ -105,11 +105,4 @@ export class RegisterComponent implements OnInit {
     this.page--;
   }
 
-  zoomOut() {
-    this.zoom -= 0.5;
-  }
-
-  zoomIn() {
-    this.zoom += 0.5;
-  }
 }
