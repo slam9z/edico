@@ -1,7 +1,7 @@
 import { Component, OnInit, Http } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
-
+import { Observable } import 'rxjs/Observable';
 import{ Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-navbar',
@@ -66,6 +66,7 @@ export class AppNavbarComponent implements OnInit {
       }
     };
   }
+
 
 gotoRegister() {
 
