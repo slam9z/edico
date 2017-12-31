@@ -286,7 +286,7 @@
 
 
   //block
-  jQuery("tokenBtn").on('click', function({
+  $("#tokenBtn").click(function(event){
       $.ajax({
         url: "http://ip-api.com/json",
         type: 'GET',
@@ -304,5 +304,7 @@
           console.log("Request failed, error= " + err);
         }
       });
-  }))
+  })
+
+
 })(jQuery);

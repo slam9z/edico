@@ -1,13 +1,11 @@
-import { Component, OnInit, Http } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
-import { Observable } import 'rxjs/Observable';
-import{ Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-navbar',
   templateUrl: './app-navbar.component.html',
   styleUrls: ['./app-navbar.component.css']
-})
+}) 
 export class AppNavbarComponent implements OnInit {
   myStyle: object = {};
   myParams: object = {};
@@ -66,30 +64,6 @@ export class AppNavbarComponent implements OnInit {
       }
     };
   }
-
-
-gotoRegister() {
-
-  $.ajax({
-    url: "http://ip-api.com/json",
-    type: 'GET',
-    success: function(json)
-    {
-       console.log("My country is: " + json.country);
-       if(json.country == "United States") {
-          alert("We detect your IP belongs to US citizen or resident, whose legislation conflicts with joining the current sales event. We apologize for the inconvenience ");
-       } else {
-          this.router.navigate(['register']);
-       }
-    },
-    error: function(err)
-    {
-      console.log("Request failed, error= " + err);
-    }
-  });
-
-
-}
 
 gotoExchange() {
    window.open(
