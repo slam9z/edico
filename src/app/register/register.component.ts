@@ -23,6 +23,11 @@ export class RegisterComponent implements OnInit {
 
   isCopied = false;
   display = 'none';
+
+  page = 1;
+  zoom = 0.5;
+  totalPages: number;
+  isLoaded= false;
   constructor(private fb: FormBuilder, private authService: AuthService,
               private translate: TranslateService,
               private modalService: NgbModal) {
@@ -70,7 +75,7 @@ export class RegisterComponent implements OnInit {
           // console.log('Success:', res);
           this.msgType = 'success';
           this.showEDT = true;
-          this.message = 'Ether Delta would like to thank you for your attention to our project. Our Contract Address as following:';
+          this.message = 'Ether Delta would like to thank you for your attention to our project. Contract Address:';
 
         })
         .catch((err) => {
@@ -81,7 +86,30 @@ export class RegisterComponent implements OnInit {
         });
 
     }
+  }
+
+  /**PDF Viewer**/
 
 
+  afterLoadComplete(pdfData: any) {
+    this.totalPages = pdfData.numPages;
+    console.log(pdfData.zoom);
+    this.isLoaded = true;
+  }
+
+  nextPage() {
+    this.page++;
+  }
+
+  prevPage() {
+    this.page--;
+  }
+
+  zoomOut() {
+    this.zoom -= 0.5;
+  }
+
+  zoomIn() {
+    this.zoom += 0.5;
   }
 }

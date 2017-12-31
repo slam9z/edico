@@ -7,8 +7,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-
-import { ParticlesModule } from 'angular-particle';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -32,6 +30,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -55,7 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireDatabaseModule,
     FormsModule,
     AngularFireAuthModule,
-    ParticlesModule,
+    PdfViewerModule,
     ToastModule.forRoot(),
     ClipboardModule,
     NgbModule.forRoot(),
