@@ -288,20 +288,21 @@
   //block
   $("#tokenBtn").click(function(event){
       $.ajax({
-        url: "http://ip-api.com/json",
+        url: "https://ipapi.co/json",
         type: 'GET',
         success: function(json)
         {
            console.log("My country is: " + json.country);
-           if(json.country == "United States") {
+           if(json.country == "US1") {
               alert("We detect your IP belongs to US citizen or resident, whose legislation conflicts with joining the current sales event. We apologize for the inconvenience ");
            } else {
-              this.router.navigate(['register']);
+//              this.router.navigate(['register']);
+                window.open("/register","_self")
            }
         },
         error: function(err)
         {
-          console.log("Request failed, error= " + err);
+         console.log("Request failed, error= " + err);
         }
       });
   })
