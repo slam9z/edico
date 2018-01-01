@@ -76,7 +76,6 @@ export class RegisterComponent implements OnInit {
           this.msgType = 'success';
           this.showEDT = true;
           this.message = 'Ether Delta would like to thank you for your attention to our project. Contract Address:';
-
         })
         .catch((err) => {
           // this.msgType = 'danger';

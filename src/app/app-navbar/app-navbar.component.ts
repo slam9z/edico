@@ -5,7 +5,7 @@ import { TranslateService, DefaultLangChangeEvent } from '@ngx-translate/core';
   selector: 'app-navbar',
   templateUrl: './app-navbar.component.html',
   styleUrls: ['./app-navbar.component.css']
-}) 
+})
 export class AppNavbarComponent implements OnInit {
   myStyle: object = {};
   myParams: object = {};
@@ -64,6 +64,8 @@ export class AppNavbarComponent implements OnInit {
       }
     };
   }
+
+
 
 gotoExchange() {
    window.open(

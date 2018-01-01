@@ -288,7 +288,7 @@
   //block
   $("#tokenBtn").click(function(event){
       $.ajax({
-        url: "http://ip-api.com/json",
+        url: "https://ip-api.com/json",
         type: 'GET',
         success: function(json)
         {
