@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -20,7 +21,7 @@ export class RegisterComponent implements OnInit {
   private user: User;
   contractAddress: string;
   showEDT: boolean;
-
+  siteKey: string;
   isCopied = false;
   display = 'none';
 
@@ -33,9 +34,10 @@ export class RegisterComponent implements OnInit {
               private modalService: NgbModal) {
     this.createForm();
     this.contractAddress = '0xCe53a179047ebed80261689367c093C90A94cC08';
+    this.siteKey = '6LdEDz8UAAAAAIr8Oks0e29LIdzbU4KMnTYAb2-P';
+
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
-
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
    }
@@ -54,7 +56,8 @@ export class RegisterComponent implements OnInit {
       agreement0: ['', Validators.requiredTrue],
       agreement1: ['', Validators.requiredTrue],
       agreement2: ['', Validators.requiredTrue],
-      agreement3: ['', Validators.requiredTrue]
+      agreement3: ['', Validators.requiredTrue],
+      recaptcha: [null, Validators.required]
 
     });
 
@@ -70,7 +73,7 @@ export class RegisterComponent implements OnInit {
   get agreement1() { return this.registerForm.get('agreement1'); }
   get agreement2() { return this.registerForm.get('agreement2'); }
   get agreement3() { return this.registerForm.get('agreement3'); }
-
+  get recaptcha() { return this.registerForm.get('recaptcha'); }
   public onFormSubmit() {
     if (this.registerForm.valid) {
       this.user = this.registerForm.value;

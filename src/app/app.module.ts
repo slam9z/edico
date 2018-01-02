@@ -32,6 +32,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -53,11 +56,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
+
     AngularFireAuthModule,
     PdfViewerModule,
     ToastModule.forRoot(),
     ClipboardModule,
     NgbModule.forRoot(),
+    RecaptchaModule.forRoot(),
+    RecaptchaFormsModule,
     AppRoutesModule,
     HttpClientModule,
     TranslateModule.forRoot({
