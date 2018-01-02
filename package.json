@@ -4,6 +4,7 @@
     "license": "MIT",
     "scripts": {
         "ng": "ng",
+        "start_uat": "ng serve --host 0.0.0.0 --port 8880 --disable-host-check true",
         "start": "ng serve --host 0.0.0.0 --port 4200 --disable-host-check true",
         "build": "ng build -prod -aot --buildOptimizer",
         "test": "ng test",
