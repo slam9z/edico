@@ -84,7 +84,7 @@ h1 {
     /* Opera 11.10+ */
     background: -ms-linear-gradient(45deg, #8cc6f0 5%, #025a99 99%);
     /* IE10+ */
-    background: linear-gradient(45deg, #8cc6f0 5%, #025a99 99%);
+    background: white;
     /* W3C */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f32d27', endColorstr='#ff6b45', GradientType=1);
     /* IE6-8 fallback on horizontal gradient */
@@ -190,7 +190,7 @@ h1 {
 }
 
 .login-margin {
-    margin: 40px;
+    //margin: 40px;
 }
 
 .login-padding-left {

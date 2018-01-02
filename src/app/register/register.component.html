@@ -1,7 +1,8 @@
 <main role="main">
 
     <section id="mu-login">
-        <div class=" login-padding-top login-margin ">
+        <!--<div class=" login-padding-top login-margin ">-->
+      <div class="col-md-8 col-md-offset-2 login-padding-top ">
             <div class="login_box wrapperCenter">
 
                 <div class="col-md-12 col-xs-12" align="center">
@@ -12,8 +13,8 @@
 
                 </div>
                 <form novalidate [formGroup]="registerForm" (ngSubmit)="onFormSubmit() ">
-                    <div class="col-md-12 col-xs-12 ">
-
+                    <div class="row">
+                      <div class="col-md-12">
                         <div class="control">
                             <input type="email" class="form-control " formControlName="email" placeholder="Email " required>
                         </div>
@@ -22,6 +23,8 @@
                                 <span [hidden]="!email.errors">Invalid email address</span>
                             </div>
                         </div>
+                      </div>
+                      <div class=" col-md-12">
                         <div class="control">
                             <input type="password" class="form-control" placeholder="Password" formControlName="password" required>
                         </div>
@@ -32,27 +35,31 @@
                                 <span [hidden]="!password.errors.minlength">Password must be 6 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </span>
                             </div>
                         </div>
-                        <div class="line"></div>
-                        <div class="control">
-                            <div class="form-group">
-                                <label class="label">Terms & Agreement</label>
-                                <div *ngIf="isLoaded" style="text-align: center;">
-                                    <button class="btn btn-primary-outline" (click)="prevPage()" [disabled]="page === 1">Prev</button>
-                                    <span>{{ page }} / {{ totalPages }}</span>
-                                    <button class="btn btn-primary-outline" (click)="nextPage()" [disabled]="page === totalPages">Next</button>
-                                </div>
+                      </div>
+                    </div>
 
-                                <div style="border: 1px solid #e5e5e5; height: 450px; overflow: scroll; padding: 1px;text-align: center;">
-                                    <pdf-viewer src="assets/whitepaper/Term_Agreement.pdf" [show-all]="false" [page]="page" [zoom]="0.1" [fit-to-page]="true" [autoresize]="true" (after-load-complete)="afterLoadComplete($event)">
-                                    </pdf-viewer>
+                        <!--<div class="line"></div>-->
+                        <!--<div class="control">-->
+                            <!--<div class="form-group">-->
+                                <!--<label class="label" style="text-align: center;">Terms & Agreement</label>-->
+                                <!--<div *ngIf="isLoaded" style="text-align: center;">-->
+                                    <!--<button class="btn btn-primary-outline" (click)="prevPage()" [disabled]="page === 1">Prev</button>-->
+                                    <!--<span>{{ page }} / {{ totalPages }}</span>-->
+                                    <!--<button class="btn btn-primary-outline" (click)="nextPage()" [disabled]="page === totalPages">Next</button>-->
+                                <!--</div>-->
 
-                                </div>
-                            </div>
-                        </div>
+                                <!--<div style="border: 1px solid #e5e5e5; height: 450px; overflow: scroll; padding: 1px;text-align: center;">-->
+                                    <!--<pdf-viewer src="assets/whitepaper/Term_Agreement.pdf" [show-all]="false" [page]="page" [zoom]="0.1" [fit-to-page]="true" [autoresize]="true" (after-load-complete)="afterLoadComplete($event)">-->
+                                    <!--</pdf-viewer>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
                         <div class="control">
                             <div class="form-group">
                                 <div class="checkbox login-padding-left">
-                                    <label><input type="checkbox" name="agreement" formControlName="agreement" value=""> I have read, understand, and agree to abide by the terms of the EtherDelta Decentralized exchange agreement.</label>
+                                  <a href="/assets/whitepaper/Term_Agreement.pdf" target="_blank"><h6>Term and Agreement</h6></a>
+                                  <label><input type="checkbox" style="color:white;" name="agreement" formControlName="agreement" value=""><p> I have read, understand, and agree to abide by the terms of the EtherDelta Decentralized exchange agreement.</p></label>
                                 </div>
                             </div>
                         </div>
@@ -98,11 +105,12 @@
 
                                             <div class="row wrapper">
                                                 <div class="alert alert-danger" role="alert">
-                                                    <strong>Note:</strong> In order to ensure the transaction in Ethereum, the recommanded safe LOW gas price:
-                                                    <p>Minimum Gas Limit: 100000</p>
-                                                    <p>Gas price: 20 - 50</p>
-                                                    <p>Minimum ETH purchase: 0.10</p>
-
+                                                  <h6><strong>To ensure the transaction, we recommend:</strong></h6>
+                                                  <ul>
+                                                    <li><strong>Minimum Gas Limit:</strong> 100000</li>
+                                                    <li><strong>Minium Gas price:</strong> 20</li>
+                                                    <li><strong>Minimum Purchase Amount:</strong> 0.10 ETH</li>
+                                                  </ul>
                                                 </div>
                                             </div>
 
@@ -113,7 +121,7 @@
                             </div>
 
                         </div>
-                    </div>
+
                     <div>
 
                     </div>
