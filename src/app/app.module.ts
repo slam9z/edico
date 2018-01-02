@@ -32,8 +32,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
-import { RecaptchaModule } from 'ng-recaptcha';
-import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+// import { RecaptchaModule } from 'ng-recaptcha';
+// import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -62,8 +62,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ToastModule.forRoot(),
     ClipboardModule,
     NgbModule.forRoot(),
-    RecaptchaModule.forRoot(),
-    RecaptchaFormsModule,
+    // RecaptchaModule.forRoot(),
+    // RecaptchaFormsModule,
     AppRoutesModule,
     HttpClientModule,
     TranslateModule.forRoot({

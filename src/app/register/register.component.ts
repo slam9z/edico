@@ -8,6 +8,8 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 
 
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -56,8 +58,8 @@ export class RegisterComponent implements OnInit {
       agreement0: ['', Validators.requiredTrue],
       agreement1: ['', Validators.requiredTrue],
       agreement2: ['', Validators.requiredTrue],
-      agreement3: ['', Validators.requiredTrue],
-      recaptcha: [null, Validators.required]
+      agreement3: ['', Validators.requiredTrue]
+      // recaptcha: [null, Validators.required]
 
     });
 
