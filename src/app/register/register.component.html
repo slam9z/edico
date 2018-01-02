@@ -73,9 +73,7 @@
                         <div class="control">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="col-sm-6" style="visible:false">
-                                        <h5 id="totalRaised"></h5>
-                                    </div>
+                                    <input type="hidden" id="totalRaised" />
                                     <ngb-alert *ngIf="message" [type]="msgType" role="alert" [dismissible]="false">
                                         {{ message }}
                                         <div>
