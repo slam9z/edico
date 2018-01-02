@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
 import { validateConfig } from '@angular/router/src/config';
 import { User } from '../shared/models/index';
 import { AuthService } from '../shared/services/auth.service';
@@ -51,7 +51,10 @@ export class RegisterComponent implements OnInit {
         Validators.minLength(6),
         Validators.maxLength(25)
       ]],
-      agreement: ['', Validators.required],
+      agreement0: ['', Validators.requiredTrue],
+      agreement1: ['', Validators.requiredTrue],
+      agreement2: ['', Validators.requiredTrue],
+      agreement3: ['', Validators.requiredTrue]
 
     });
 
@@ -62,8 +65,11 @@ export class RegisterComponent implements OnInit {
 
   get password() { return this.registerForm.get('password'); }
 
-  get agreement() { return this.registerForm.get('agreement'); }
+  get agreement0() { return this.registerForm.get('agreement0'); }
 
+  get agreement1() { return this.registerForm.get('agreement1'); }
+  get agreement2() { return this.registerForm.get('agreement2'); }
+  get agreement3() { return this.registerForm.get('agreement3'); }
 
   public onFormSubmit() {
     if (this.registerForm.valid) {
