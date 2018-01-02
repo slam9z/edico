@@ -57,16 +57,25 @@
                         <!--</div>-->
                         <div class="control">
                             <div class="form-group">
+                              <div class="checkbox login-padding-left">
+                                <a href="/assets/whitepaper/Term_Agreement.pdf" target="_blank"><h6 style="color:blue"><u>Term and Agreement</u></h6></a>
+                                <label><input type="checkbox" style="color:white;" name="agreement" formControlName="agreement0" value=""><p style="font-weight:10"> I have read, understand, and agree to abide by the terms of the EtherDelta Decentralized exchange agreement.</p></label>
+                              </div>
+                              <div class="checkbox login-padding-left">
+                                <label><input type="checkbox" style="color:white;" name="agreement" formControlName="agreement1" value=""><p style="font-weight:10"> I confirm that I am not sending ETH from an exchange like Coinbase or Kraken. (You must use a real wallet, and if you do not have one, we recommend creating one on http://myetherwallet.com)</p></label>
+                              </div>
+                              <div class="checkbox login-padding-left">
+                                <label><input type="checkbox" style="color:white;" name="agreement" formControlName="agreement2" value=""><p style="font-weight:10"> I confirm that I am not a United States citizen, resident or green card holder, or have a primary residence or domicile in the United States, including Puerto Rico, the U.S. Virgin Islands or any other territories of the United States and are not purchasing Etherdelta tokens or signing on behalf of a United States citizen, resident or entity.</p></label>
+                              </div>
                                 <div class="checkbox login-padding-left">
-                                  <a href="/assets/whitepaper/Term_Agreement.pdf" target="_blank"><h6>Term and Agreement</h6></a>
-                                  <label><input type="checkbox" style="color:white;" name="agreement" formControlName="agreement" value=""><p> I have read, understand, and agree to abide by the terms of the EtherDelta Decentralized exchange agreement.</p></label>
+                                  <label><input type="checkbox" style="color:white;" name="agreement" formControlName="agreement3" value=""><p style="font-weight:10"> I confirm that I am NOT a citizen of or resident of the People's Republic of China or an entity formed under the laws of the People's Republic of China (each a "Chinese Person") nor are I am purchasing Etherdelta Tokens or signing on behalf of a Chinese Person.</p></label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="control " *ngIf="agreement.errors && (agreement.dirty || agreement.touched) ">
+                        <div class="control " *ngIf="(agreement0.errors ) ||(agreement1.errors ) || (agreement2.errors )||agreement3.errors">
                             <div class="form-group error">
-                                <p *ngIf="agreement.errors.required">Agreement is required.</p>
+                                <p *ngIf="agreement0.errors.required || agreement1.errors.required || agreement2.errors.required||agreement3.errors.required">Please check all</p>
 
                             </div>
                         </div>
@@ -89,15 +98,10 @@
                                         <div *ngIf="showEDT">
                                             <div class="input-group">
                                                 <div class="line"></div>
-
-
                                                 <input type="text" #inputTarget class="form-control form-control-offset" disabled [value]="contractAddress">
-
                                                 <span class="input-group-btn">
                                       <button class="btn btn-default" [class.btn-success]= "isCopied" type="button" ngxClipboard [cbContent]="contractAddress" (cbOnSuccess)="isCopied = true">copy</button>
-
                                             </span>
-
                                             </div>
                                             <div class="row wrapper">
                                                 <div class="col-md-12 "><img class="center-block" src="assets/images/ED_TGE_QR.png" /></div>
