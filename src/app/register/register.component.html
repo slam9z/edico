@@ -12,7 +12,7 @@
 
                 </div>
                 <form novalidate [formGroup]="registerForm" (ngSubmit)="onFormSubmit() ">
-                    <div class="col-md-12 col-xs-12 login_control">
+                    <div class="col-md-12 col-xs-12 ">
 
                         <div class="control">
                             <input type="email" class="form-control " formControlName="email" placeholder="Email " required>
@@ -73,7 +73,9 @@
                         <div class="control">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="col-sm-6" style="visible:false"><h5 id="totalRaised"></h5></div>
+                                    <div class="col-sm-6" style="visible:false">
+                                        <h5 id="totalRaised"></h5>
+                                    </div>
                                     <ngb-alert *ngIf="message" [type]="msgType" role="alert" [dismissible]="false">
                                         {{ message }}
                                         <div>
@@ -96,13 +98,15 @@
                                                 <div class="col-md-12 "><img class="center-block" src="assets/images/ED_TGE_QR.png" /></div>
                                             </div>
 
-                                          <div class="row wrapper">
-                                            <div class="alert alert-danger" role="alert">
-                                              <strong>Note:</strong> Due to high volume transaction in Ethereum and Smart contract feature,
-                                              <p>Recommended gas: 100000</p>
-                                              <p>Recommended gas price: 50(best) or 20</p>
+                                            <div class="row wrapper">
+                                                <div class="alert alert-danger" role="alert">
+                                                    <strong>Note:</strong> In order to ensure the transaction in Ethereum, the recommanded safe LOW gas price:
+                                                    <p>Minimum Gas Limit: 100000</p>
+                                                    <p>Gas price: 20 - 50</p>
+                                                    <p>Minimum ETH purchase: 0.10</p>
+
+                                                </div>
                                             </div>
-                                          </div>
 
                                         </div>
                                     </ngb-alert>
