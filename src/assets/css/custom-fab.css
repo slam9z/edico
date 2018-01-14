@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500);
+@import "~assets/css/font-robot.css";
 body {
     background: #00BCD4;
     min-height: 100vh;

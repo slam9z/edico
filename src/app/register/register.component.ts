@@ -4,11 +4,8 @@ import { validateConfig } from '@angular/router/src/config';
 import { User } from '../shared/models/index';
 import { AuthService } from '../shared/services/auth.service';
 import { Router } from '@angular/router';
-import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { TranslateService } from '@ngx-translate/core';
-
-
-
 
 @Component({
   selector: 'app-register',
@@ -32,8 +29,7 @@ export class RegisterComponent implements OnInit {
   totalPages: number;
   isLoaded= false;
   constructor(private fb: FormBuilder, private authService: AuthService,
-              private translate: TranslateService,
-              private modalService: NgbModal) {
+              private translate: TranslateService) {
     this.createForm();
     this.contractAddress = '0xCe53a179047ebed80261689367c093C90A94cC08';
     this.siteKey = '6LdEDz8UAAAAAIr8Oks0e29LIdzbU4KMnTYAb2-P';
@@ -65,7 +61,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-
   get email() { return this.registerForm.get('email'); }
 
   get password() { return this.registerForm.get('password'); }
@@ -75,7 +70,8 @@ export class RegisterComponent implements OnInit {
   get agreement1() { return this.registerForm.get('agreement1'); }
   get agreement2() { return this.registerForm.get('agreement2'); }
   get agreement3() { return this.registerForm.get('agreement3'); }
-  get recaptcha() { return this.registerForm.get('recaptcha'); }
+  // get recaptcha() { return this.registerForm.get('recaptcha'); }
+
   public onFormSubmit() {
     if (this.registerForm.valid) {
       this.user = this.registerForm.value;
@@ -107,7 +103,6 @@ export class RegisterComponent implements OnInit {
 
   afterLoadComplete(pdfData: any) {
     this.totalPages = pdfData.numPages;
-    console.log(pdfData.zoom);
     this.isLoaded = true;
   }
 

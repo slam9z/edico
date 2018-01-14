@@ -11,26 +11,25 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { environment } from './../environments/environment';
-import { AppNavbarComponent } from './app-navbar/app-navbar.component';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal';
 
+import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { HomeComponent } from './home/home.component';
-import { ScheduleComponent } from './schedule/schedule.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { ClipboardModule } from 'ngx-clipboard';
 
 import { AuthGuardService, AuthService } from './shared/services/index';
 import { AppRoutesModule } from './app-routes.module';
-import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+
+import { HttpModule } from '@angular/http';
 
 // import { RecaptchaModule } from 'ng-recaptcha';
 // import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
@@ -43,12 +42,9 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     AppNavbarComponent,
-    ScheduleComponent,
     RegisterComponent,
     LoginComponent,
-    DashboardComponent,
-    HomeComponent,
-    ModalDialogComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-
+    HttpModule,
     AngularFireAuthModule,
     PdfViewerModule,
     ToastModule.forRoot(),

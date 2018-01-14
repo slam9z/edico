@@ -25,7 +25,7 @@
     "Home": "Home",
     "Impartial": "Impartial",
     "Increase the value of the wallet": "Increase the value of the wallet",
-    "Language": "",
+    "Language": "语言",
     "Low credit and operational costs": "Low credit and operational costs",
     "Marketing & Promotion (50%)": "Marketing & Promotion (50%)",
     "Mobile Platform": "Mobile Platform",
@@ -73,6 +73,9 @@
     "Founder & CEO of 1ST Blood": "Founder & CEO of 1ST Blood",
     "Advisor of Lampix": "Advisor of Lampix",
     "Partner of NewBlock Capital": "Partner of NewBlock Capital",
-    "": ""
+    "": "",
+    "Thank you for your commitment!": "Thank you for your commitment!",
+    "TGE IS CLOSED NOW.": "TGE IS CLOSED NOW.",
+    "(All unsold EDT tokens will be burned)": "(All unsold EDT tokens will be burned)"
 
 }

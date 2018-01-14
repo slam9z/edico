@@ -8,11 +8,12 @@
     padding-top: 5rem;
 } */
 
-.outer {
+
+/* .outer {
     bottom: 0;
     background-size: cover;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQIWwFXAKj/AXRJff/8AvkA2/PoACQtLwDf5e0AEQYAABQP/gABgVyR/wkVBgDk9/QABwANAPj28QAO8PcAFwMHAAFbQ3T/+wL7AD4wOQDW4+QAIyQZANm8zQA2GicA1MwgQu1Sq8AAAAAASUVORK5CYII=);
-}
+} */
 
 
 /*
@@ -263,11 +264,15 @@ button:focus {
     padding: 0 0 15px;
 }
 
+.mu-bg {
+    background-image: url("assets/images/trianglifybg-min.jpg");
+}
+
 
 /*--------------------*/
 
 #mu-hero {
-    background-image: url("assets/images/trianglifybg.jpg");
+    background-image: url("assets/images/trianglifybg-min.jpg");
     display: inline;
     float: left;
     width: 100%;
@@ -2054,7 +2059,7 @@ button:focus {
 }
 
 .side-nav-bar-ul li {
-    padding: 0.06em 0.5em;
+    padding: 0.35em 0.5em;
     background: #008FD7;
     border-radius: 50%;
     margin: 10px 5px;

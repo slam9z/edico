@@ -1,90 +1,55 @@
-<!--<main role="main">
-    <section id="mu-login">
-        <div class="container login-padding-top">
-            <div class="row login_box">
+<main role="main">
+    <section id="mu-login" class="mu-bg">
+        <!--<div class=" login-padding-top login-margin ">-->
+        <div class="col-md-8 col-md-offset-2 login-padding-top ">
+            <div class="login_box wrapperCenter">
+
                 <div class="col-md-12 col-xs-12" align="center">
+                    <h2><span>Login</span></h2>
                     <div class="line">
-                        <h3>Registration</h3>
+
                     </div>
-                    <div class="wrapper"><img src="http://lorempixel.com/80/80/people" class="img-circle" /></div>
+                    <div class="wrapper"><img src="assets/images/logo.jpg" class="img-circle" /></div>
 
                 </div>
-                <!
-        <div class="col-md-6 col-xs-6 follow line text-center">
-            <h3>
-                125651 <br/> <span>FOLLOWERS</span>
-            </h3>
-        </div>
-        <div class="col-md-6 col-xs-6 follow line text-center">
-            <h3>
-                125651 <br/> <span>FOLLOWERS</span>
-            </h3>
-        </div>-->
+                <form novalidate [formGroup]="loginForm" (ngSubmit)="signInWithEmail() ">
+                    <!-- <pre>{{loginForm.value | json}}</pre> -->
 
-<!--<div class="col-md-12 col-xs-12 login_control">
+                    <div class="control" *ngIf="loginForm.errors && (loginForm.dirty || loginForm.touched) ">
+                        <div class="form-group error">
+                            <span [hidden]="!loginForm.errors">The email/password is invalid.</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="control">
+                                <input type="email" class="form-control " formControlName="email" placeholder="Email " required>
+                            </div>
+                            <div class="control" *ngIf="email.errors && (email.dirty || email.touched) ">
+                                <div [hidden]="!email.errors.required" class="form-group error">
+                                    <span>Invalid email address</span>
 
-    <div class="control">
-        <div class="label">Email Address</div>
-        <input type="text" class="form-control" value="admin@gmail.com" />
-    </div>
-
-    <div class="control">
-        <div class="label">Password</div>
-        <input type="password" class="form-control" value="123456" />
-    </div>
-    <div class="text-center">
-        <button class="btn btn-orange">LOGIN</button>
-    </div>
-
-</div>
-
-<form novalidate [formGroup]="registerForm " (ngSubmit)="onFormSubmit() " class="mu-contact-form ">
-
-    <div class="form-group " [ngClass]="{ 'has-danger': email.invalid && (email.dirty || email.touched), 'has-success': email.valid && (email.dirty || email.touched)} ">
-
-        <input type="email" class="form-control font_white" formControlName="email" placeholder="Enter Email " required>
-    </div>
-    <div class="form-group error " *ngIf="email.errors && (email.dirty || email.touched) ">
-        <p *ngIf="email.errors.required ">Email is required</p>
-        <p *ngIf="email.errors.pattern ">The email address must contain at least the @ character</p>
-    </div>
-
-
-    <div class="form-group ">
-        <input type="password " class="form-control font_white " placeholder="Password " formControlName="password" required>
-    </div>
-
-    <div class="form-group ">
-        <div class="form-group error " *ngIf="password.errors && (password.dirty || password.touched) ">
-            <p *ngIf="password.errors.required ">Password is required.</p>
-            <p *ngIf="password.errors.pattern">Password must be include at one letter and one number.</p>
-            <p *ngIf="password.errors.minlength ">Password must be 6 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
-        </div>
-    </div>
-    <div class="form-group">
-        <label>Terms of use</label>
-        <div class="col-xs-8">
-            <div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
-                <p>ajsdahskdhaksdakhdkahsjdaxbakjhsdhafjhahdj</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-12">
+                            <div class="control">
+                                <input type="password" class="form-control" placeholder="Password" formControlName="password" required>
+                            </div>
+                            <div class="control" *ngIf="password.errors && (password.dirty || password.touched) ">
+                                <div class="form-group error ">
+                                    <span [hidden]="!password.errors.required">Password is required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center ">
+                        <button type="submit " class="btn btn-block btn-primary" [disabled]="!loginForm.valid"><span>Login</span></button>
+                        <a href="/register" class="btn btn-block btn-secondary" role="button" aria-disabled="true">Not a user yet?</a>
+                    </div>
+                    <input type="hidden" id="totalRaised" />
+                </form>
             </div>
         </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-xs-6 col-xs-offset-3">
-            <div class="checkbox">
-                <input type="checkbox" name="agreement" formControlName="agreement" value="1"> Agree with the terms and conditions
-
-            </div>
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-success"><span>SUBMIT</span></button>
-     <pre>{{contactForm.value | json}}</pre>
-
-</form>
-</div>
-</div>
-
-</section>
-</main>-->
+    </section>
+</main>

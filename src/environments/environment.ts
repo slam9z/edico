@@ -12,5 +12,8 @@ export const environment = {
     projectId: 'bfoin-app',
     storageBucket: '',
     messagingSenderId: '963386838127'
-  }
+  },
+  blockCountry: ['US1', 'US'],
+  crowdsaleEnd: 151594560000
+
 };

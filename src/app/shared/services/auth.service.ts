@@ -10,21 +10,23 @@ import { RegisterComponent } from '../../register/register.component';
 
 @Injectable()
 export class AuthService {
-  private user: Observable<firebase.User>;
-  private userDetails: firebase.User = null;
+  user: Observable<firebase.User> | null;
+  userDetails: firebase.User = null;
 
   constructor(private firebaseAuth: AngularFireAuth, private router: Router, private db: AngularFireDatabase) {
     this.user = firebaseAuth.authState;
+
     this.user.subscribe(
       (user) => {
         if (user) {
           this.userDetails = user;
-          console.log(this.userDetails);
+
         } else {
           this.userDetails = null;
         }
       }
     );
+
   }
 
   signup(user: User) {
@@ -34,7 +36,7 @@ export class AuthService {
     return this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then((newUser) => {
       if (newUser) {
         const itemObservable = this.db.object('/userProfile/' + newUser.uid);
-        console.log('user: ', itemObservable);
+
         itemObservable.set({
           email: email,
           password: password,
@@ -46,30 +48,28 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    this.firebaseAuth
+    return this.firebaseAuth
       .auth
-      .signInWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Nice, it worked!');
-      })
-      .catch(err => {
-        console.log('Something went wrong:', err.message);
-      });
+      .signInWithEmailAndPassword(email, password);
   }
 
+
+  getCurrentUser(): firebase.User {
+    return this.firebaseAuth.auth.currentUser;
+  }
   isLoggedIn() {
-    if (this.userDetails == null) {
+
+    if (!this.userDetails) {
       return false;
     } else {
       return true;
     }
   }
-
-
   logout() {
-    // this.firebaseAuth.auth.signOut()
-    //   .then((res) => this.router.navigate(['/']));
+    this.firebaseAuth.auth.signOut()
+      .then((res) => this.router.navigate(['/']));
   }
-
 }
+
+
 
